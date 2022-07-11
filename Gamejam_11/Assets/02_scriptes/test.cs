@@ -10,10 +10,10 @@ public class test : MonoBehaviour
     }
     void Update()
     {
-        float a=Input.gyro.rotationRateUnbiased.z+1;
- Vector3 ve =new Vector3(0,0,a);
+       // float a=Input.gyro.rotationRateUnbiased.z+1;
+ //Vector3 ve =new Vector3(0,0,a);
  
-        transform.Rotate (ve);
+        transform.Rotate (0,0,Input.gyro.gravity.z);
         //transform.Rotate+=ve*Time.deltaTime;
     }
 }
