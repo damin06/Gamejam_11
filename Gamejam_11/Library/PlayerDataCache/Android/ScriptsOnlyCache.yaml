@@ -1,7 +1,6 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Player
     - test
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
@@ -22,8 +21,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
-    Unity.Mobile.AndroidLogcat.Editor.dll:
-    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -54,7 +51,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
-    - Class: 61
+    - Class: 60
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -62,8 +59,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 2370}
-    - Class: 114
-      Script: {instanceID: 2604}
     - Class: 114
       Script: {instanceID: 2784}
     - Class: 114
@@ -279,7 +274,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: d00836be6db8990b732790efe0806464
+      Hash: 80e731a7b2d64f2e7fa5249a024da0e8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -934,4 +929,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/01_Scenes/SampleScene.unity
-  playerPath: C:/Users/user/Desktop/top_seceret/test12.apk
+  playerPath: C:/Users/user/Desktop/top_seceret/test25.apk

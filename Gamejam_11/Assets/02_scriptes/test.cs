@@ -12,8 +12,6 @@ public class test : MonoBehaviour
     }
     void Update()
     {
-       
-        transform.Rotate (0,0,Input.gyro.rotationRateUnbiased.z);
-
+        transform.Rotate (0,0,Input.gyro.rotationRateUnbiased.z*3.8f);
     }
 }
