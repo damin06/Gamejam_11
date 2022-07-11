@@ -37,8 +37,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\02_scriptes\test.cs" />
-     <Compile Include="Assets\02_scriptes\test2.cs" />
      <Compile Include="Assets\02_scriptes\test3.cs" />
+     <Compile Include="Assets\02_scriptes\test2.cs" />
+     <Compile Include="Assets\02_scriptes\Player.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

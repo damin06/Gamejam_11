@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
+   
     void Start()
     {
-        Input.gyro.enabled = true;
+       
+        Input.gyro.enabled =true;
     }
     void Update()
     {
-       // float a=Input.gyro.rotationRateUnbiased.z+1;
- //Vector3 ve =new Vector3(0,0,a);
- 
-        transform.Rotate (0,0,Input.gyro.gravity.z);
-        //transform.Rotate+=ve*Time.deltaTime;
+       
+        transform.Rotate (0,0,Input.gyro.rotationRateUnbiased.z);
+
     }
 }
