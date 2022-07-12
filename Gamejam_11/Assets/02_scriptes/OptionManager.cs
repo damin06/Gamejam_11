@@ -23,6 +23,11 @@ public class OptionManager : MonoBehaviour
     [SerializeField] Text Option_Language;
     [SerializeField] Text Option_Vibration;
     [SerializeField] Text Option_SoundEffect;
+    [SerializeField] Text Help;
+
+
+    public GameObject Cat;
+
 
     private void Start()
     {
@@ -42,12 +47,10 @@ public class OptionManager : MonoBehaviour
             Option.SetActive(false);
             OptionTool.SetActive(false);
         }
-    }
 
-    public void Language_Change()
-    {
-        if (buttonEvent.Language == false)
+        if (GameControl.control.Language == false)
         {
+            Cat.transform.position = new Vector3(680, 1635, 0);
             Title.text = "고양이 구르다";
             Exit.text = "정말 나가실건가요?";
             ExitNo.text = "아니요";
@@ -56,10 +59,11 @@ public class OptionManager : MonoBehaviour
             Option_Language.text = "English";
             Option_Vibration.text = "진동";
             Option_SoundEffect.text = "효과음";
-            buttonEvent.Language = true;
+            Help.text = "도움";
         }
         else
         {
+            Cat.transform.position = new Vector3(542, 1317, 0);
             Title.text = "Cat Roll";
             Exit.text = "Are you really going out?";
             ExitNo.text = "No";
@@ -68,7 +72,7 @@ public class OptionManager : MonoBehaviour
             Option_Language.text = "한국어";
             Option_Vibration.text = "Vibration";
             Option_SoundEffect.text = "Sound Effect";
-            buttonEvent.Language = false;
+            Help.text = "Help";
         }
     }
 

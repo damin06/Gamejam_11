@@ -13,12 +13,19 @@ public class ButtonEvent : MonoBehaviour
     ExitManager exitManager;
     OptionManager optionManager;
     HelpManager helpManager;
+    StartAmi startAmi;
 
     private void Start()
     {
         exitManager = FindObjectOfType<ExitManager>();
         optionManager = FindObjectOfType<OptionManager>();
         helpManager = FindObjectOfType<HelpManager>();
+        startAmi = FindObjectOfType<StartAmi>();
+    }
+
+    public void StartButton()
+    {
+        startAmi.AmiStart = true;
     }
 
     public void ExitButton()
@@ -49,11 +56,16 @@ public class ButtonEvent : MonoBehaviour
     }
 
 
-    public bool Language = true;
-
     public void Option_Language()
     {
-        optionManager.Language_Change();
+        if (GameControl.control.Language == true)
+        {
+            GameControl.control.Language = false;
+        }
+        else
+        {
+            GameControl.control.Language = true;
+        }
     }
 
     public bool Sound = true;
