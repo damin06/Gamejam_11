@@ -2,14 +2,15 @@ using System.Net.Mime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class Player : MonoBehaviour
 {
+ 
        [SerializeField]private float speed;
      Vector3 vec = Vector3.right;
      float movementscale=24;
-     [SerializeField]Text te;
+
      Rigidbody2D rd;
        bool isGround=false;
         bool isrun=false;
@@ -30,7 +31,7 @@ public class Player : MonoBehaviour
 //           force.y = Vector3.Dot(Input.gyro.gravity, Vector3.up)* movementscale;
 //          rd.AddForce(force);
 //          //rd.AddForce(Vector3.forward*movementscale);
-         te.text=Input.gyro.gravity.ToString();         
+     
          if(Input.GetMouseButtonDown(0))
          {
          // Destroy(gameObject);
@@ -39,21 +40,15 @@ public class Player : MonoBehaviour
            if (Input.GetMouseButton(0) && isGround)
        {
            transform.position+=vec*speed*Time.deltaTime;
-                  Debug.Log("Pressed left click.");
+                 // Debug.Log("Pressed left click.");
        }
 
             if(Input.touchCount>0 && isGround)
          {
-          isrun=true;
+      transform.position+=vec*speed*Time.deltaTime;
          } 
-         else
-         {
-          isrun=false;
-         }  
-         if(isrun)
-         {
-           transform.position+=vec*speed*Time.deltaTime;
-         }
+ 
+     
     }
 
     void FixedUpdate()
@@ -68,7 +63,12 @@ public class Player : MonoBehaviour
 }
 private void OnCollisionEnter2D(Collision2D collision)
 {
-          Debug.Log("샌즈");
+     if(collision.gameObject.CompareTag("Mackerel"))
+     {
+              Destroy(collision.gameObject);
+          CoinManager.CoinCounter++;
+     }
+         
 if(collision.gameObject.CompareTag("Ground"))
 {
      Debug.Log("와우");
@@ -83,5 +83,15 @@ private void OnCollisionExit2D(Collision2D collision)
 {
       isGround=false;
 }
+private void OnTrigerEnter2D(CircleCollider2D collision)
+{
 
+     Debug.Log("와 샌즈!");
+     if(collision.CompareTag("Mackerel"))
+     {
+          Debug.Log("와 샌즈!");
+                     Destroy(collision.gameObject);
+          CoinManager.CoinCounter++;
+     }
+}
 }

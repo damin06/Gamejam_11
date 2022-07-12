@@ -1,9 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ButtonEvent
+    - ExitManager
+    - HelpManager
+    - OptionManager
     - Player
+    - score
     - test
-    - test2
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineComposer
@@ -25,6 +29,11 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -32,11 +41,31 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Outline
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/01_Scenes/SampleScene.unity:
+    Assets/01_Scenes/Skin.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/01_Scenes/Start.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -49,42 +78,117 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1656}
+    - Class: 114
+      Script: {instanceID: 2478}
+    - Class: 114
+      Script: {instanceID: 2946}
+    - Class: 114
+      Script: {instanceID: 3144}
+    - Class: 114
+      Script: {instanceID: 3414}
+    - Class: 114
+      Script: {instanceID: 3648}
+    - Class: 114
+      Script: {instanceID: 3692}
+    - Class: 114
+      Script: {instanceID: 3826}
+    - Class: 114
+      Script: {instanceID: 3928}
+    - Class: 114
+      Script: {instanceID: 4174}
+    - Class: 114
+      Script: {instanceID: 5282}
+    - Class: 114
+      Script: {instanceID: 6466}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/01_Scenes/test.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
     - Class: 60
       Script: {instanceID: 0}
+    - Class: 70
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2376}
+      Script: {instanceID: 2020}
     - Class: 114
-      Script: {instanceID: 2610}
+      Script: {instanceID: 2468}
     - Class: 114
-      Script: {instanceID: 2790}
+      Script: {instanceID: 2478}
     - Class: 114
-      Script: {instanceID: 2844}
+      Script: {instanceID: 2712}
     - Class: 114
-      Script: {instanceID: 2936}
+      Script: {instanceID: 2892}
     - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 2946}
     - Class: 114
-      Script: {instanceID: 3148}
+      Script: {instanceID: 3038}
     - Class: 114
-      Script: {instanceID: 3312}
+      Script: {instanceID: 3144}
     - Class: 114
-      Script: {instanceID: 3588}
+      Script: {instanceID: 3250}
     - Class: 114
-      Script: {instanceID: 4446}
+      Script: {instanceID: 3414}
     - Class: 114
-      Script: {instanceID: 4516}
+      Script: {instanceID: 3692}
     - Class: 114
-      Script: {instanceID: 5656}
+      Script: {instanceID: 4552}
     - Class: 114
-      Script: {instanceID: 6218}
+      Script: {instanceID: 4622}
+    - Class: 114
+      Script: {instanceID: 5372}
+    - Class: 114
+      Script: {instanceID: 5764}
+    - Class: 114
+      Script: {instanceID: 5816}
+    - Class: 114
+      Script: {instanceID: 6326}
+    - Class: 114
+      Script: {instanceID: 35196}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -280,7 +384,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 82cc8fa7534dce785a95fc02e772da1a
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -448,6 +552,12 @@ ScriptsOnlyBuild:
     className: Cinemachine3rdPersonFollow
   - hash:
       serializedVersion: 2
+      Hash: 313af157988da5e539eb0df42db17df1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HelpManager
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -512,6 +622,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.SpriteShape.Runtime.dll
     namespaceName: UnityEngine.U2D
     className: SpriteShapeController
+  - hash:
+      serializedVersion: 2
+      Hash: 78df300bd3bd6dacb5d067e311e015c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonEvent
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -616,7 +732,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: 085aef6f9834773a6f07c9f7e02b6de1
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: test
@@ -694,12 +810,6 @@ ScriptsOnlyBuild:
     className: CinemachineTrackedDolly
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: test3
-  - hash:
-      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -752,6 +862,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: e97f420a38156f26b2d4e56fb846be19
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OptionManager
   - hash:
       serializedVersion: 2
       Hash: 1e3d6222ff533d213aab144eb854a53b
@@ -836,12 +952,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
-  - hash:
-      serializedVersion: 2
-      Hash: 83e769eee07fc231384c812eedbb8224
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: test2
   - hash:
       serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
@@ -932,7 +1042,21 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9bd5f96bb63a16b733e80bdc7aeb66d4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExitManager
+  - hash:
+      serializedVersion: 2
+      Hash: 1884b44e6c7c1b6dee1f952f420179e9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: score
   platform: 13
   scenePathNames:
-  - Assets/01_Scenes/SampleScene.unity
-  playerPath: C:/Users/user/Desktop/top_seceret/test31.apk
+  - Assets/01_Scenes/test.unity
+  - Assets/01_Scenes/Start.unity
+  - Assets/01_Scenes/Skin.unity
+  playerPath: C:/Users/user/Desktop/top_seceret/test36.apk
