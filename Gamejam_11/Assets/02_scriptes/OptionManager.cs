@@ -24,6 +24,8 @@ public class OptionManager : MonoBehaviour
     [SerializeField] Text Option_Vibration;
     [SerializeField] Text Option_SoundEffect;
     [SerializeField] Text Help;
+    [SerializeField] Text HelpText1;
+    [SerializeField] Text HelpText2;
 
 
     public GameObject Cat;
@@ -60,6 +62,8 @@ public class OptionManager : MonoBehaviour
             Option_Vibration.text = "진동";
             Option_SoundEffect.text = "효과음";
             Help.text = "도움";
+            HelpText1.text = "화면을 기울여 맵을 기울일 수 있습니다.";
+            HelpText2.text = "고양이는 구르거나 점프할 수 있습니다.";
         }
         else
         {
@@ -73,6 +77,8 @@ public class OptionManager : MonoBehaviour
             Option_Vibration.text = "Vibration";
             Option_SoundEffect.text = "Sound Effect";
             Help.text = "Help";
+            HelpText1.text = "You can tile the screen to tilt the map.";
+            HelpText2.text = "Cat can roll and jump";
         }
     }
 
