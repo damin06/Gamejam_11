@@ -31,13 +31,14 @@ public class Player : MonoBehaviour
 //           force.y = Vector3.Dot(Input.gyro.gravity, Vector3.up)* movementscale;
 //          rd.AddForce(force);
 //          //rd.AddForce(Vector3.forward*movementscale);
+  
+       
      
-         if(Input.GetMouseButtonDown(0))
-         {
-         // Destroy(gameObject);
-          Debug.Log("아");
-         }
-           if (Input.GetMouseButton(0) && isGround)
+    }
+
+    void FixedUpdate()
+{
+         if (Input.GetMouseButton(0) && isGround)
        {
            transform.position+=vec*speed*Time.deltaTime;
                  // Debug.Log("Pressed left click.");
@@ -48,11 +49,6 @@ public class Player : MonoBehaviour
       transform.position+=vec*speed*Time.deltaTime;
          } 
  
-     
-    }
-
-    void FixedUpdate()
-{
 //rd.AddForce(Vector3.forward * movementscale);
     
 	// float gx = Input.gyro.rotationRateUnbiased.x * 9.81f;
@@ -63,11 +59,11 @@ public class Player : MonoBehaviour
 }
 private void OnCollisionEnter2D(Collision2D collision)
 {
-     if(collision.gameObject.CompareTag("Mackerel"))
-     {
-              Destroy(collision.gameObject);
-          CoinManager.CoinCounter++;
-     }
+     // if(collision.gameObject.CompareTag("Mackerel"))
+     // {
+     //          Destroy(collision.gameObject);
+     //      CoinManager.CoinCounter++;
+     // }
          
 if(collision.gameObject.CompareTag("Ground"))
 {
@@ -83,15 +79,16 @@ private void OnCollisionExit2D(Collision2D collision)
 {
       isGround=false;
 }
-private void OnTrigerEnter2D(CircleCollider2D collision)
-{
+// private void OnTrigerEnter2D(CircleCollider2D collision)
+// {
 
-     Debug.Log("와 샌즈!");
-     if(collision.CompareTag("Mackerel"))
-     {
-          Debug.Log("와 샌즈!");
-                     Destroy(collision.gameObject);
-          CoinManager.CoinCounter++;
-     }
-}
+//      Debug.Log("와 샌즈!");
+//      if(collision.CompareTag("Mackerel"))
+//      {
+//           Debug.Log("와 샌즈!");
+//                      Destroy(collision.gameObject);
+//           CoinManager.CoinCounter++;
+//      }
+// }
+//312-0176-0316-51 농협 고다민
 }

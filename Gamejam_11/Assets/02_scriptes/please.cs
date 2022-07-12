@@ -15,19 +15,18 @@ public class please : MonoBehaviour
     {
         //Debug.Log("아암암ㄴ어ㅏㅁㄴ엄나암ㅇ");
     }
-     private void OnTriggerEnter(Collider other) 
+     private void OnTriggerEnter2D(Collider2D other) 
      {  
         
     Debug.Log("와 샌즈!");
          if(other.CompareTag("Player"))
          {
+             CoinManager.CoinCounter++;
               Destroy(gameObject);
-            CoinManager.CoinCounter++;
               Debug.Log("와 샌즈!");
            
           
         }
-
      }   
     // private void OnCollisionEnter2D(Collision2D collision)
     // {
