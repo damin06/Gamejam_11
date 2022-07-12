@@ -605,17 +605,17 @@ MonoBehaviour:
   DrawShop: {fileID: 7566502728283229677, guid: 1078c011ce617fa4197fe018104328e1, type: 3}
   DrawWindow: {fileID: 6007318655988635892, guid: f21548cb316628640a4b30f9fd94e747, type: 3}
   DrawImage: {fileID: 1714637898}
-  Image1: {fileID: -6520931374934800559, guid: 06dd5cb8f3cb3b348bd7ca5982f0ef97, type: 3}
-  Image2: {fileID: 3068902663736122212, guid: 06dd5cb8f3cb3b348bd7ca5982f0ef97, type: 3}
-  Image3: {fileID: -6153561202904985581, guid: 06dd5cb8f3cb3b348bd7ca5982f0ef97, type: 3}
-  Image4: {fileID: 8803323224997649494, guid: 06dd5cb8f3cb3b348bd7ca5982f0ef97, type: 3}
-  Image5: {fileID: -1002381130090279931, guid: 06dd5cb8f3cb3b348bd7ca5982f0ef97, type: 3}
-  Image6: {fileID: -5146328326537219296, guid: 06dd5cb8f3cb3b348bd7ca5982f0ef97, type: 3}
-  Image7: {fileID: -2310529734171910887, guid: 06dd5cb8f3cb3b348bd7ca5982f0ef97, type: 3}
-  Image8: {fileID: -3025953916943371678, guid: 06dd5cb8f3cb3b348bd7ca5982f0ef97, type: 3}
-  Image9: {fileID: -5608081999903298834, guid: 06dd5cb8f3cb3b348bd7ca5982f0ef97, type: 3}
+  Image1: {fileID: -6520931374934800559, guid: abc6151297863b54db40608f55c05adf, type: 3}
+  Image2: {fileID: 3068902663736122212, guid: abc6151297863b54db40608f55c05adf, type: 3}
+  Image3: {fileID: -6153561202904985581, guid: abc6151297863b54db40608f55c05adf, type: 3}
+  Image4: {fileID: 8803323224997649494, guid: abc6151297863b54db40608f55c05adf, type: 3}
+  Image5: {fileID: -1002381130090279931, guid: abc6151297863b54db40608f55c05adf, type: 3}
+  Image6: {fileID: -5146328326537219296, guid: abc6151297863b54db40608f55c05adf, type: 3}
+  Image7: {fileID: -2310529734171910887, guid: abc6151297863b54db40608f55c05adf, type: 3}
+  Image8: {fileID: -3025953916943371678, guid: abc6151297863b54db40608f55c05adf, type: 3}
+  Image9: {fileID: -5608081999903298834, guid: abc6151297863b54db40608f55c05adf, type: 3}
   Image10: {fileID: 21300000, guid: 27d50bb639a8ed84a85ac118d5df7f10, type: 3}
-  Nomoney: {fileID: 21300000, guid: ea237eeb968e255469d2d63d8a72647b, type: 3}
+  Nomoney: {fileID: 21300000, guid: f32932178d9be9149b308fe40f857137, type: 3}
   RandomInt: 0
 --- !u!1 &1556843341
 GameObject:
@@ -886,7 +886,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ea237eeb968e255469d2d63d8a72647b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f32932178d9be9149b308fe40f857137, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
