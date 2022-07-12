@@ -1,3 +1,4 @@
+using System.Net.Mime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,10 +9,11 @@ public class Player : MonoBehaviour
        [SerializeField]private float speed;
      Vector3 vec = Vector3.right;
      float movementscale=24;
-    // [SerializeField]Text te;
+     [SerializeField]Text te;
      Rigidbody2D rd;
-     public static bool isGround=false;
+       bool isGround=false;
         bool isrun=false;
+  
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +30,7 @@ public class Player : MonoBehaviour
 //           force.y = Vector3.Dot(Input.gyro.gravity, Vector3.up)* movementscale;
 //          rd.AddForce(force);
 //          //rd.AddForce(Vector3.forward*movementscale);
-         //te.text=Input.gyro.gravity.ToString();         
+         te.text=Input.gyro.gravity.ToString();         
          if(Input.GetMouseButtonDown(0))
          {
          // Destroy(gameObject);
@@ -40,7 +42,7 @@ public class Player : MonoBehaviour
                   Debug.Log("Pressed left click.");
        }
 
-            if(Input.touchCount>0)
+            if(Input.touchCount>0 && isGround)
          {
           isrun=true;
          } 
@@ -77,7 +79,7 @@ else
      isGround=false;
 }
 }
-private void OnTriggerExit2D(Collision2D collision)
+private void OnCollisionExit2D(Collision2D collision)
 {
       isGround=false;
 }

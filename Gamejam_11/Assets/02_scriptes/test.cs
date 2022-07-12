@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class test : MonoBehaviour
 {
-   
+   [SerializeField]Text be;
     void Start()
     {
        
@@ -12,6 +13,7 @@ public class test : MonoBehaviour
     }
     void Update()
     {
-        transform.Rotate (0,0,Input.gyro.rotationRateUnbiased.z*3.8f);
+        be.text=Input.gyro.rotationRateUnbiased.ToString();
+        transform.Rotate (0,0,Input.gyro.rotationRateUnbiased.z*4.1f);
     }
 }
