@@ -7,9 +7,12 @@ public class Random11 : MonoBehaviour
 {
 
     // 활성화,비활성화 할 오브젝트
+    private float currenttime=3;
 
     public GameObject DrawShop; // 뽑기 상점
     public GameObject DrawWindow; // 뽑는 창
+
+    
 
     // 불러올 이미지 오브젝트
     public Image DrawImage; // 랜덤 이미지를 출력할 오브젝트
@@ -21,10 +24,7 @@ public class Random11 : MonoBehaviour
     public Sprite Image4;
     public Sprite Image5;
     public Sprite Image6;
-    public Sprite Image7;
-    public Sprite Image8;
-    public Sprite Image9;
-    public Sprite Image10;
+   
 
     public GameObject Gi1;
     public GameObject Gi2;
@@ -32,10 +32,7 @@ public class Random11 : MonoBehaviour
     public GameObject Gi4;
     public GameObject Gi5;
     public GameObject Gi6;
-    public GameObject Gi7;
-    public GameObject Gi8;
-    public GameObject Gi9;
-    public GameObject Gi10;
+    
 
 
 
@@ -43,8 +40,9 @@ public class Random11 : MonoBehaviour
 
     public GameObject Result_PopUp;
     public GameObject Result_Btn;
-    
-    
+    public GameObject Result_Text;
+
+
 
     // 변수
     public int RandomInt; // 랜덤 변수
@@ -54,28 +52,31 @@ public class Random11 : MonoBehaviour
     void Update()
     {
         RandomInt = Random.Range(0, 10); // 랜덤 범위를 설정합니다.
-
+        currenttime += Time.deltaTime;
 
     }
 
     public void OneDraw() // 1회 뽑기 버튼을 클릭 시
     {
-        if (CoinManager.Coin >= 10)
+        if (currenttime > 1.7f)
         {
-            CoinManager.Coin -= 10;
+            if (CoinManager.Coin >= 10)
+            {
+                CoinManager.Coin -= 10;
 
-            DrawShop.SetActive(false); //뽑기 선택 화면을 비활성화하고,
-            DrawWindow.SetActive(true);// 랜덤 이미지를 출력한 화면을 활성화합니다.
+                DrawShop.SetActive(false); //뽑기 선택 화면을 비활성화하고,
+                DrawWindow.SetActive(true);// 랜덤 이미지를 출력한 화면을 활성화합니다.
 
-            StartCoroutine("RandomOn");
+                StartCoroutine("RandomOn");
+            }
+
         }
-            
-        
 
         
     }
     IEnumerator RandomOn()
     {
+        currenttime = 0;
         for (int i = 0; i <= 5; i++)
         {
             DrawImage.sprite = Image1;
@@ -89,13 +90,7 @@ public class Random11 : MonoBehaviour
             DrawImage.sprite = Image5;
             yield return new WaitForSeconds(0.04f);
             DrawImage.sprite = Image6;
-            yield return new WaitForSeconds(0.04f);
-            DrawImage.sprite = Image7;
-            yield return new WaitForSeconds(0.04f);
-            DrawImage.sprite = Image8;
-            yield return new WaitForSeconds(0.04f);
-            DrawImage.sprite = Image9;
-            yield return new WaitForSeconds(0.04f);
+            
         }
 
         if (RandomInt == 1) // RandomInt가 1이라면
@@ -103,6 +98,7 @@ public class Random11 : MonoBehaviour
             DrawImage.sprite = Image1;
             Result_PopUp.SetActive(true);
             Result_Btn.SetActive(true);
+            Result_Text.SetActive(true);
 
             Gi1.SetActive(true);
 
@@ -112,6 +108,7 @@ public class Random11 : MonoBehaviour
             DrawImage.sprite = Image2;
             Result_PopUp.SetActive(true);
             Result_Btn.SetActive(true);
+            Result_Text.SetActive(true);
 
             Gi2.SetActive(true);
 
@@ -121,6 +118,7 @@ public class Random11 : MonoBehaviour
             DrawImage.sprite = Image3;
             Result_PopUp.SetActive(true);
             Result_Btn.SetActive(true);
+            Result_Text.SetActive(true);
 
             Gi3.SetActive(true);
 
@@ -130,6 +128,7 @@ public class Random11 : MonoBehaviour
             DrawImage.sprite = Image4;
             Result_PopUp.SetActive(true);
             Result_Btn.SetActive(true);
+            Result_Text.SetActive(true);
 
             Gi4.SetActive(true);
 
@@ -139,46 +138,22 @@ public class Random11 : MonoBehaviour
             DrawImage.sprite = Image5;
             Result_PopUp.SetActive(true);
             Result_Btn.SetActive(true);
+            Result_Text.SetActive(true);
 
             Gi5.SetActive(true);
 
         }
-        else if (RandomInt == 6)
+        else
         {
             DrawImage.sprite = Image6;
             Result_PopUp.SetActive(true);
             Result_Btn.SetActive(true);
+            Result_Text.SetActive(true);
 
             Gi6.SetActive(true);
 
         }
-        else if (RandomInt == 7)
-        {
-            DrawImage.sprite = Image7;
-            Result_PopUp.SetActive(true);
-            Result_Btn.SetActive(true);
-
-            Gi7.SetActive(true);
-
-        }
-        else if (RandomInt == 8)
-        {
-            DrawImage.sprite = Image8;
-            Result_PopUp.SetActive(true);
-            Result_Btn.SetActive(true);
-
-            Gi8.SetActive(true);
-
-        }
-        else if (RandomInt == 9)
-        {
-            DrawImage.sprite = Image9;
-            Result_PopUp.SetActive(true);
-            Result_Btn.SetActive(true);
-
-            Gi9.SetActive(true);
-
-        }
+        
         Invoke("CloseDraw", 2f);
 
 
