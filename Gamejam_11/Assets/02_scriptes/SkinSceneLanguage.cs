@@ -8,6 +8,8 @@ public class SkinSceneLanguage : MonoBehaviour
     [SerializeField] Text Back;
     [SerializeField] Text Skin;
     [SerializeField] Text Roulette;
+    [SerializeField] Text SkinHelpText1;
+    [SerializeField] Text SkinHelpText2;
 
     ButtonEvent buttonEvent;
 
@@ -25,12 +27,16 @@ public class SkinSceneLanguage : MonoBehaviour
             Back.text = "돌아기기";
             Skin.text = "스킨";
             Roulette.text = "룰렛";
+            SkinHelpText1.text = "고양이를 누르면 고양이 스킨을 착용할 수 있습니다.";
+            SkinHelpText2.text = "[뽑기]에서 고양이를 얻어 스킨을 적용할 수 있습니다.";
         }
         else
         {
             Back.text = "Home";
             Skin.text = "Skin";
             Roulette.text = "Roulette";
+            SkinHelpText1.text = "You can get a cat from [Roulette] and apply a skin.";
+            SkinHelpText2.text = "Tap on a cat to wear a cat skin.";
         }
     }
 }

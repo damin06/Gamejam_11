@@ -36,6 +36,42 @@ public class OptionManager : MonoBehaviour
     private void Start()
     {
         buttonEvent = FindObjectOfType<ButtonEvent>();
+
+        if (GameControl.control.Sound == true)
+        {
+            startBGM.volume = 1;
+            Sound_On.SetActive(true);
+            Sound_Off.SetActive(false);
+        }
+        else
+        {
+            startBGM.volume = 0;
+            Sound_On.SetActive(false);
+            Sound_Off.SetActive(true);
+        }
+
+        if (GameControl.control.SoundEffect == true)
+        {
+            SoundEffect_On.SetActive(true);
+            SoundEffect_Off.SetActive(false);
+        }
+        else
+        {
+            SoundEffect_On.SetActive(false);
+            SoundEffect_Off.SetActive(true);
+        }
+
+        if (GameControl.control.Vibration == true)
+        {
+            Vibration_On.SetActive(true);
+            Vibration_Off.SetActive(false);
+        }
+        else
+        {
+            Handheld.Vibrate();
+            Vibration_On.SetActive(false);
+            Vibration_Off.SetActive(true);
+        }
     }
 
     void Update()

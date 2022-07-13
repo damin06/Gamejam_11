@@ -63,6 +63,7 @@
     <Compile Include="Assets\02_scriptes\HelpManager.cs" />
     <Compile Include="Assets\02_scriptes\StartAmi.cs" />
     <Compile Include="Assets\02_scriptes\ButtonEvent.cs" />
+    <Compile Include="Assets\02_scriptes\SkinHelpManager.cs" />
     <Compile Include="Assets\02_scriptes\GameControl.cs" />
     <Compile Include="Assets\02_scriptes\test.cs" />
     <Compile Include="Assets\02_scriptes\test3.cs" />

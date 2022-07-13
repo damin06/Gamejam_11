@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameControl : MonoBehaviour
 {
     public static GameControl control;
-
+    
     public bool Language = true;
     public bool Sound = true;
     public bool SoundEffect = true;
