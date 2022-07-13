@@ -61,12 +61,12 @@
     <Compile Include="Assets\02_scriptes\HelpManager.cs" />
     <Compile Include="Assets\02_scriptes\StartAmi.cs" />
     <Compile Include="Assets\02_scriptes\ButtonEvent.cs" />
+    <Compile Include="Assets\02_scriptes\GameControl.cs" />
     <Compile Include="Assets\02_scriptes\test.cs" />
     <Compile Include="Assets\02_scriptes\test3.cs" />
     <Compile Include="Assets\02_scriptes\OptionManager.cs" />
     <Compile Include="Assets\02_scriptes\test2.cs" />
     <Compile Include="Assets\02_scriptes\ExitManager.cs" />
-    <Compile Include="Assets\02_scriptes\GameControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
