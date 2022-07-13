@@ -12,7 +12,10 @@ public class OptionManager : MonoBehaviour
     public AudioSource startBGM;
     public GameObject Sound_On;
     public GameObject Sound_Off;
-
+    public GameObject SoundEffect_On;
+    public GameObject SoundEffect_Off;
+    public GameObject Vibration_On;
+    public GameObject Vibration_Off;
 
     ButtonEvent buttonEvent;
     [SerializeField] Text Title;
@@ -21,12 +24,9 @@ public class OptionManager : MonoBehaviour
     [SerializeField] Text ExitYes;
     [SerializeField] Text OptionText;
     [SerializeField] Text Option_Language;
-    [SerializeField] Text Option_Vibration;
-    [SerializeField] Text Option_SoundEffect;
     [SerializeField] Text Help;
     [SerializeField] Text HelpText1;
     [SerializeField] Text HelpText2;
-
 
     public GameObject Cat;
 
@@ -52,51 +52,90 @@ public class OptionManager : MonoBehaviour
 
         if (GameControl.control.Language == false)
         {
-            Cat.transform.position = new Vector3(680, 1635, 0);
             Title.text = "고양이 구르다";
             Exit.text = "정말 나가실건가요?";
             ExitNo.text = "아니요";
             ExitYes.text = "네";
             OptionText.text = "설정";
             Option_Language.text = "English";
-            Option_Vibration.text = "진동";
-            Option_SoundEffect.text = "효과음";
             Help.text = "도움";
             HelpText1.text = "화면을 기울여 맵을 기울일 수 있습니다.";
             HelpText2.text = "고양이는 구르거나 점프할 수 있습니다.";
         }
         else
         {
-            Cat.transform.position = new Vector3(542, 1317, 0);
             Title.text = "Cat Roll";
             Exit.text = "Are you really going out?";
             ExitNo.text = "No";
             ExitYes.text = "Yes";
             OptionText.text = "Option";
             Option_Language.text = "한국어";
-            Option_Vibration.text = "Vibration";
-            Option_SoundEffect.text = "Sound Effect";
             Help.text = "Help";
             HelpText1.text = "You can tile the screen to tilt the map.";
             HelpText2.text = "Cat can roll and jump";
         }
     }
 
+    public void CatPosition()
+    {
+        if (GameControl.control.Language == false)
+        {
+            Cat.transform.position = new Vector3(680, 1635, 0);
+        }
+        else
+        {
+            Cat.transform.position = new Vector3(542, 1317, 0);
+        }
+    }
+
     public void Sound_on_off()
     {
-        if (buttonEvent.Sound == true)
+        if (GameControl.control.Sound == true)
         {
             startBGM.volume = 0;
             Sound_On.SetActive(false);
             Sound_Off.SetActive(true);
-            buttonEvent.Sound = false;
+            GameControl.control.Sound = false;
         }
         else
         {
             startBGM.volume = 1;
             Sound_On.SetActive(true);
             Sound_Off.SetActive(false);
-            buttonEvent.Sound = true;
+            GameControl.control.Sound = true;
+        }
+    }
+
+    public void SoundEffect_on_off()
+    {
+        if (GameControl.control.SoundEffect == true)
+        {
+            SoundEffect_On.SetActive(false);
+            SoundEffect_Off.SetActive(true);
+            GameControl.control.SoundEffect = false;
+        }
+        else
+        {
+            SoundEffect_On.SetActive(true);
+            SoundEffect_Off.SetActive(false);
+            GameControl.control.SoundEffect = true;
+        }
+    }
+
+    public void Vibration_on_off()
+    {
+        if (GameControl.control.Vibration == true)
+        {
+            Vibration_On.SetActive(false);
+            Vibration_Off.SetActive(true);
+            GameControl.control.Vibration = false;
+        }
+        else
+        {
+            Handheld.Vibrate();
+            Vibration_On.SetActive(true);
+            Vibration_Off.SetActive(false);
+            GameControl.control.Vibration = true;
         }
     }
 }
