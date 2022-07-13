@@ -7,6 +7,7 @@ public class ButtonEvent : MonoBehaviour
 {
     public void SceneLoader(string sceneName)
     {
+        GameControl.control.Button();
         SceneManager.LoadScene(sceneName);
     }
 
@@ -25,11 +26,13 @@ public class ButtonEvent : MonoBehaviour
 
     public void StartButton()
     {
+        GameControl.control.StartButton();
         startAmi.AmiStart = true;
     }
 
     public void ExitButton()
     {
+        GameControl.control.Button();
         exitManager.ExitClick = true;
     }
 
@@ -47,6 +50,7 @@ public class ButtonEvent : MonoBehaviour
 
     public void OptionButton()
     {
+        GameControl.control.Button();
         optionManager.click = true;
     }
 
@@ -58,15 +62,17 @@ public class ButtonEvent : MonoBehaviour
 
     public void Option_Language()
     {
+        GameControl.control.Button();
+
         if (GameControl.control.Language == true)
         {
-            optionManager.CatPosition();
             GameControl.control.Language = false;
+            //optionManager.CatPosition();
         }
         else
         {
-            optionManager.CatPosition();
             GameControl.control.Language = true;
+            //optionManager.CatPosition();
         }
     }
 
@@ -88,6 +94,7 @@ public class ButtonEvent : MonoBehaviour
 
     public void HelpButton()
     {
+        GameControl.control.Button();
         helpManager.HelpClick = true;
     }
 
