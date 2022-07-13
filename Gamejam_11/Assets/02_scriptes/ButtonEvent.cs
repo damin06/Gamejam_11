@@ -28,6 +28,12 @@ public class ButtonEvent : MonoBehaviour
     {
         GameControl.control.StartButton();
         startAmi.AmiStart = true;
+        startAmi.realStart();
+    }
+
+    public void GameStart()
+    {
+        SceneManager.LoadScene("test");
     }
 
     public void ExitButton()

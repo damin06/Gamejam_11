@@ -567,8 +567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6217f05b19b61a547a44cdd259cecb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Language: 1
-  Sound: 1
 --- !u!1 &320508224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,7 +1138,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 1, g: 0.972549, b: 0.972549, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1416,8 +1414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6217f05b19b61a547a44cdd259cecb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Language: 1
-  Sound: 1
 --- !u!4 &1433886756
 Transform:
   m_ObjectHideFlags: 0
@@ -1430,7 +1426,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1464241637
 GameObject:
