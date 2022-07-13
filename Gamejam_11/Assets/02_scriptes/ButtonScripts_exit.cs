@@ -13,7 +13,7 @@ public class ButtonScripts_exit : MonoBehaviour
     public GameObject Gi3;
     public GameObject Gi4;
     public GameObject Gi5;
-    public GameObject Gi6;
+  
     
 
 
@@ -39,7 +39,7 @@ public class ButtonScripts_exit : MonoBehaviour
         Gi3.SetActive(false);
         Gi4.SetActive(false);
         Gi5.SetActive(false);
-        Gi6.SetActive(false);
+       
        
     }
 }
