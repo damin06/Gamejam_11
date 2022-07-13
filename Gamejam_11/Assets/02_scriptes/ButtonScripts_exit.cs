@@ -13,10 +13,7 @@ public class ButtonScripts_exit : MonoBehaviour
     public GameObject Gi4;
     public GameObject Gi5;
     public GameObject Gi6;
-    public GameObject Gi7;
-    public GameObject Gi8;
-    public GameObject Gi9;
-    public GameObject Gi10;
+    
 
 
     // Start is called before the first frame update
@@ -41,9 +38,6 @@ public class ButtonScripts_exit : MonoBehaviour
         Gi4.SetActive(false);
         Gi5.SetActive(false);
         Gi6.SetActive(false);
-        Gi7.SetActive(false);
-        Gi8.SetActive(false);
-        Gi9.SetActive(false);
-        Gi10.SetActive(false);
+        
     }
 }

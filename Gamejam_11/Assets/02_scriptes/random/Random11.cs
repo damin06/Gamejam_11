@@ -21,10 +21,7 @@ public class Random11 : MonoBehaviour
     public Sprite Image4;
     public Sprite Image5;
     public Sprite Image6;
-    public Sprite Image7;
-    public Sprite Image8;
-    public Sprite Image9;
-    public Sprite Image10;
+    
 
     public GameObject Gi1;
     public GameObject Gi2;
@@ -32,10 +29,7 @@ public class Random11 : MonoBehaviour
     public GameObject Gi4;
     public GameObject Gi5;
     public GameObject Gi6;
-    public GameObject Gi7;
-    public GameObject Gi8;
-    public GameObject Gi9;
-    public GameObject Gi10;
+    
 
 
 
@@ -53,7 +47,8 @@ public class Random11 : MonoBehaviour
 
     void Update()
     {
-        RandomInt = Random.Range(0, 10); // 랜덤 범위를 설정합니다.
+       
+       RandomInt = Random.Range(0, 10); // 랜덤 범위를 설정합니다.
 
 
     }
@@ -90,12 +85,7 @@ public class Random11 : MonoBehaviour
             yield return new WaitForSeconds(0.04f);
             DrawImage.sprite = Image6;
             yield return new WaitForSeconds(0.04f);
-            DrawImage.sprite = Image7;
-            yield return new WaitForSeconds(0.04f);
-            DrawImage.sprite = Image8;
-            yield return new WaitForSeconds(0.04f);
-            DrawImage.sprite = Image9;
-            yield return new WaitForSeconds(0.04f);
+            
         }
 
         if (RandomInt == 1) // RandomInt가 1이라면
@@ -143,42 +133,18 @@ public class Random11 : MonoBehaviour
             Gi5.SetActive(true);
 
         }
-        else if (RandomInt == 6)
+        else 
         {
+            
             DrawImage.sprite = Image6;
+            Debug.Log("??");
             Result_PopUp.SetActive(true);
             Result_Btn.SetActive(true);
 
             Gi6.SetActive(true);
 
         }
-        else if (RandomInt == 7)
-        {
-            DrawImage.sprite = Image7;
-            Result_PopUp.SetActive(true);
-            Result_Btn.SetActive(true);
-
-            Gi7.SetActive(true);
-
-        }
-        else if (RandomInt == 8)
-        {
-            DrawImage.sprite = Image8;
-            Result_PopUp.SetActive(true);
-            Result_Btn.SetActive(true);
-
-            Gi8.SetActive(true);
-
-        }
-        else if (RandomInt == 9)
-        {
-            DrawImage.sprite = Image9;
-            Result_PopUp.SetActive(true);
-            Result_Btn.SetActive(true);
-
-            Gi9.SetActive(true);
-
-        }
+        
         Invoke("CloseDraw", 2f);
 
 

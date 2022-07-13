@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\02_scriptes\random\CoinManager.cs" />
     <Compile Include="Assets\02_scriptes\Player.cs" />
+    <Compile Include="Assets\02_scriptes\ButtonScripts_exit.cs" />
     <Compile Include="Assets\02_scriptes\HelpManager.cs" />
     <Compile Include="Assets\02_scriptes\ButtonEvent.cs" />
     <Compile Include="Assets\02_scriptes\test.cs" />
@@ -66,7 +67,8 @@
     <Compile Include="Assets\02_scriptes\test2.cs" />
     <Compile Include="Assets\02_scriptes\random\Random11.cs" />
     <Compile Include="Assets\02_scriptes\ExitManager.cs" />
-    <Compile Include="Assets\02_scriptes\ButtonScripts_exit.cs" />
+    <Compile Include="Assets\ButtonEvent_information.cs" />
+    <Compile Include="Assets\Information_Exit_Btn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
