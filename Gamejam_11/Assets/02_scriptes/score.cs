@@ -12,6 +12,6 @@ public class score : MonoBehaviour
     {
         time += Time.deltaTime;
 
-         timeText.text = string.Format("{0:N2}", time);
+         timeText.text = string.Format("{0:N0}", time);
     }
 }

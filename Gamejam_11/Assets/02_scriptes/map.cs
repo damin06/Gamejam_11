@@ -11,14 +11,21 @@ public class map : MonoBehaviour
       [SerializeField]GameObject c;
        [SerializeField]GameObject d;
 
+       Transform parents; 
   [SerializeField]GameObject mapImage; 
+  
+  private float MAPXpos=40+93f;
     void Start()
     {
-        randommap=Random.Range(0,5);
+     
+        parents= GameObject.Find("mapCONTROL").transform;
+        randommap=Random.Range(0,1);
         for(int i=0; i<3; i++)
         {
   BackGroundSpawn();
         }
+        MapSpawn();
+        MapSpawn();
       
     }
 
@@ -37,12 +44,16 @@ public class map : MonoBehaviour
     }
     void MapSpawn()
     {
+        ; 
+        Vector3 vec= new Vector3(MAPXpos,0.2f,0);
     switch(randommap)
     {
-        case 0 :
-        Instantiate(a);
-        break;
+        case 0 : 
+            GameObject aClone=Instantiate(a,vec,Quaternion.identity) ;
+            aClone.transform.parent= parents;
+            MAPXpos+=93f;
+            break;
     }
-      randommap=Random.Range(0,5);
+      randommap=Random.Range(0,1);
     }
 }

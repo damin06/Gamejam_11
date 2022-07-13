@@ -1,12 +1,19 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - ButtonEvent
-    - ExitManager
-    - HelpManager
-    - OptionManager
+    - CoinCounter
+    - E
+    - E2
+    - F
+    - FEVER
     - Player
+    - R
+    - V
+    - map
+    - please
     - score
+    - spawnMackerel
+    - stagedata
     - test
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
@@ -41,91 +48,12 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
-    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.Outline
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/01_Scenes/Skin.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    Assets/01_Scenes/Start.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 1656}
-    - Class: 114
-      Script: {instanceID: 2478}
-    - Class: 114
-      Script: {instanceID: 2946}
-    - Class: 114
-      Script: {instanceID: 3144}
-    - Class: 114
-      Script: {instanceID: 3414}
-    - Class: 114
-      Script: {instanceID: 3648}
-    - Class: 114
-      Script: {instanceID: 3692}
-    - Class: 114
-      Script: {instanceID: 3826}
-    - Class: 114
-      Script: {instanceID: 3928}
-    - Class: 114
-      Script: {instanceID: 4174}
-    - Class: 114
-      Script: {instanceID: 5282}
-    - Class: 114
-      Script: {instanceID: 6466}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
     Assets/01_Scenes/test.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -147,6 +75,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 60
       Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 70
       Script: {instanceID: 0}
     - Class: 81
@@ -154,41 +88,65 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2020}
+      Script: {instanceID: 1574}
     - Class: 114
-      Script: {instanceID: 2468}
+      Script: {instanceID: 1808}
     - Class: 114
-      Script: {instanceID: 2478}
+      Script: {instanceID: 1940}
     - Class: 114
-      Script: {instanceID: 2712}
+      Script: {instanceID: 2204}
     - Class: 114
-      Script: {instanceID: 2892}
+      Script: {instanceID: 2390}
     - Class: 114
-      Script: {instanceID: 2946}
+      Script: {instanceID: 2400}
     - Class: 114
-      Script: {instanceID: 3038}
+      Script: {instanceID: 2634}
     - Class: 114
-      Script: {instanceID: 3144}
+      Script: {instanceID: 2814}
     - Class: 114
-      Script: {instanceID: 3250}
+      Script: {instanceID: 2868}
     - Class: 114
-      Script: {instanceID: 3414}
+      Script: {instanceID: 2960}
     - Class: 114
-      Script: {instanceID: 3692}
+      Script: {instanceID: 2990}
     - Class: 114
-      Script: {instanceID: 4552}
+      Script: {instanceID: 3068}
     - Class: 114
-      Script: {instanceID: 4622}
+      Script: {instanceID: 3174}
     - Class: 114
-      Script: {instanceID: 5372}
+      Script: {instanceID: 3246}
     - Class: 114
-      Script: {instanceID: 5764}
+      Script: {instanceID: 3338}
     - Class: 114
-      Script: {instanceID: 5816}
+      Script: {instanceID: 3342}
     - Class: 114
-      Script: {instanceID: 6326}
+      Script: {instanceID: 3622}
     - Class: 114
-      Script: {instanceID: 35196}
+      Script: {instanceID: 3756}
+    - Class: 114
+      Script: {instanceID: 4122}
+    - Class: 114
+      Script: {instanceID: 4150}
+    - Class: 114
+      Script: {instanceID: 4490}
+    - Class: 114
+      Script: {instanceID: 4560}
+    - Class: 114
+      Script: {instanceID: 4698}
+    - Class: 114
+      Script: {instanceID: 5270}
+    - Class: 114
+      Script: {instanceID: 5312}
+    - Class: 114
+      Script: {instanceID: 5472}
+    - Class: 114
+      Script: {instanceID: 5756}
+    - Class: 114
+      Script: {instanceID: 5916}
+    - Class: 114
+      Script: {instanceID: 6002}
+    - Class: 114
+      Script: {instanceID: 6272}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -238,6 +196,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 4927822848dd4b0b8b6305e6fbd267f0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CoinManager
   - hash:
       serializedVersion: 2
       Hash: 71b711096c6c32621c1d4c02310898b7
@@ -334,6 +298,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineCollider
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: F
   - hash:
       serializedVersion: 2
       Hash: 15882a52798c275361cd0a3ada984ec5
@@ -438,6 +408,12 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
+      Hash: 06f3fe4c7cb66a5e9754c61cdb5679ae
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: map
+  - hash:
+      serializedVersion: 2
       Hash: 2792936179724025482dc04d68a47ca7
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -493,15 +469,33 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: R
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
     className: TestRunCallbackListener
+  - hash:
+      serializedVersion: 2
+      Hash: 4b4999c40c8e0d8fe4a9e00eed1595c6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: spawnMackerel
   - hash:
       serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 20c48bf9102b6310d17630c42d6e8fff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonScripts_exit
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -612,6 +606,12 @@ ScriptsOnlyBuild:
     className: CinemachineImpulseListener
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: E
+  - hash:
+      serializedVersion: 2
       Hash: 69415240821be7986b27e72bf9609a30
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -655,9 +655,21 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: E2
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachinePixelPerfect
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: V
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -700,6 +712,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: NoiseSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Mackerel
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
@@ -778,6 +796,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 1884b44e6c7c1b6dee1f952f420179e9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: score
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -864,7 +888,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: e97f420a38156f26b2d4e56fb846be19
+      Hash: 5761ee677ae3dec081c963936cea8b0d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OptionManager
@@ -886,6 +910,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineStoryboard
+  - hash:
+      serializedVersion: 2
+      Hash: 41802496136addfe460c82643ce59aab
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: stagedata
   - hash:
       serializedVersion: 2
       Hash: ffd3ed4fcd23b3e7745287c99a637247
@@ -922,6 +952,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineHardLockToTarget
+  - hash:
+      serializedVersion: 2
+      Hash: f4e9ae0e07eab874d6e0ff79d8b69d1f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FEVER
   - hash:
       serializedVersion: 2
       Hash: af56f77a30c1a2da1680c736a6f5c6e8
@@ -984,6 +1020,18 @@ ScriptsOnlyBuild:
     className: CinemachineRecomposer
   - hash:
       serializedVersion: 2
+      Hash: fd640310305494bd401f4f05b8df8a35
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CoinCounter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: please
+  - hash:
+      serializedVersion: 2
       Hash: b5c3dbcb94925c8b595ad16a62b44788
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -1006,6 +1054,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: e316b0b5d7fb7f3156eea17029c9dccc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Random11
   - hash:
       serializedVersion: 2
       Hash: bd543bad7f9f6262f10595aadb130d22
@@ -1048,15 +1102,7 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ExitManager
-  - hash:
-      serializedVersion: 2
-      Hash: 1884b44e6c7c1b6dee1f952f420179e9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: score
   platform: 13
   scenePathNames:
   - Assets/01_Scenes/test.unity
-  - Assets/01_Scenes/Start.unity
-  - Assets/01_Scenes/Skin.unity
-  playerPath: C:/Users/user/Desktop/top_seceret/test36.apk
+  playerPath: C:/Users/user/Desktop/top_seceret/test39.apk

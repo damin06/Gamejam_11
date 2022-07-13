@@ -6,19 +6,22 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
- 
+     [SerializeField]Sprite JumpSprite;  
+     [SerializeField]Sprite justcat;
        [SerializeField]private float speed;
      Vector3 vec = Vector3.right;
      float movementscale=24;
+     private float jumptime=2;
 
      Rigidbody2D rd;
        bool isGround=false;
         bool isrun=false;
-  
+       SpriteRenderer spriteRen;
 
     // Start is called before the first frame update
     void Start()
     {
+        spriteRen=GetComponent<SpriteRenderer>();
        //Input.gyro.enabled =true;
          rd=GetComponent<Rigidbody2D>();
     }
@@ -32,7 +35,19 @@ public class Player : MonoBehaviour
 //          rd.AddForce(force);
 //          //rd.AddForce(Vector3.forward*movementscale);
   
-       
+       if(isGround==false)
+       {
+          jumptime-=Time.deltaTime;
+          if(jumptime<0)
+          {
+          spriteRen.sprite=JumpSprite;
+          }
+       }
+       else
+       {
+          jumptime=2;
+          spriteRen.sprite=justcat;
+       }
      
     }
 

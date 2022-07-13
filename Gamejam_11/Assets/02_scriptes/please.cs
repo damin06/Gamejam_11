@@ -21,7 +21,7 @@ public class please : MonoBehaviour
     Debug.Log("와 샌즈!");
          if(other.CompareTag("Player"))
          {
-             CoinManager.CoinCounter++;
+             CoinCounter.Coin++;
               Destroy(gameObject);
               Debug.Log("와 샌즈!");
            
