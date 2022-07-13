@@ -17,10 +17,10 @@ public class Random11 : MonoBehaviour
     public GameObject DrawWindow; // 뽑는 창
 
     
-
     // 불러올 이미지 오브젝트
     public Image DrawImage; // 랜덤 이미지를 출력할 오브젝트
     public RectTransform DrawImageRT; // 랜덤 이미지 출력할 오브젝트 렉트 트랜스폼
+
 
     //숫자 이미지
     public Sprite Image1;
@@ -30,7 +30,6 @@ public class Random11 : MonoBehaviour
     public Sprite Image5;
     
    
-
     public GameObject Gi1;
     public GameObject Gi2;
     public GameObject Gi3;
@@ -38,43 +37,39 @@ public class Random11 : MonoBehaviour
     public GameObject Gi5;
     
     
-
-
-
     public Sprite RanCats;
 
     public GameObject Result_PopUp;
     public GameObject Result_Btn;
     public GameObject Result_Text;
 
-
+    public GameObject ExitButton;
 
     // 변수
     public int RandomInt; // 랜덤 변수
+
     private void Awake()
     {
         audioSource = GameObject.Find("CelebrationSound").GetComponent<AudioSource>();
         audioSource2 = GameObject.Find("LingingSound").GetComponent<AudioSource>();
     }
 
-
-
     void Update()
     {
-        RandomInt = Random.Range(0, 10); // 랜덤 범위를 설정합니다.
+        RandomInt = Random.Range(0, 5); // 랜덤 범위를 설정합니다.
         currenttime += Time.deltaTime;
-
     }
 
     public void OneDraw() // 1회 뽑기 버튼을 클릭 시
     {
-        // 여기
-        DrawImageRT.sizeDelta = new Vector2(400, 400);
+        DrawImageRT.sizeDelta = new Vector2(400, 400); //고양이 사이즈 조절
         if (currenttime > 1.3f)
         {
-            if (CoinManager.Coin >= 10)
+            if (GameControl.control.coin >= 100)
             {
-                CoinManager.Coin -= 10;
+                ExitButton.SetActive(false);
+
+                GameControl.control.coin -= 100;
 
                 DrawShop.SetActive(false); //뽑기 선택 화면을 비활성화하고,
                 DrawWindow.SetActive(true);// 랜덤 이미지를 출력한 화면을 활성화합니다.
@@ -86,9 +81,8 @@ public class Random11 : MonoBehaviour
             }
 
         }
-
-        
     }
+
     IEnumerator Audio()
     {
         audioSource2.Play();
@@ -97,11 +91,11 @@ public class Random11 : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         audioSource2.Play();
     }
+
     IEnumerator RandomOn()
     {
-        
-
         currenttime = 0;
+
         for (int i = 0; i <= 7; i++)
         {
             DrawImage.sprite = Image1;
@@ -117,8 +111,6 @@ public class Random11 : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             
             DrawImage.sprite = Image5;
-            
-            
         }
 
         if (RandomInt == 1) // RandomInt가 1이라면
@@ -129,6 +121,7 @@ public class Random11 : MonoBehaviour
             Result_PopUp.SetActive(true);
             Result_Btn.SetActive(true);
             Result_Text.SetActive(true);
+            ExitButton.SetActive(true);
 
             SkinChoose.skin.Cat5 = true;
 
@@ -143,6 +136,7 @@ public class Random11 : MonoBehaviour
             Result_PopUp.SetActive(true);
             Result_Btn.SetActive(true);
             Result_Text.SetActive(true);
+            ExitButton.SetActive(true);
 
             SkinChoose.skin.Cat4 = true;
 
@@ -157,6 +151,7 @@ public class Random11 : MonoBehaviour
             Result_PopUp.SetActive(true);
             Result_Btn.SetActive(true);
             Result_Text.SetActive(true);
+            ExitButton.SetActive(true);
 
             SkinChoose.skin.Cat3 = true;
 
@@ -171,6 +166,7 @@ public class Random11 : MonoBehaviour
             Result_PopUp.SetActive(true);
             Result_Btn.SetActive(true);
             Result_Text.SetActive(true);
+            ExitButton.SetActive(true);
 
             SkinChoose.skin.Cat2 = true;
 
@@ -185,23 +181,17 @@ public class Random11 : MonoBehaviour
             Result_PopUp.SetActive(true);
             Result_Btn.SetActive(true);
             Result_Text.SetActive(true);
+            ExitButton.SetActive(true);
 
             SkinChoose.skin.Cat6 = true;
 
             Gi5.SetActive(true);
 
         }
-        // 여기
-        DrawImageRT.sizeDelta = new Vector2(400, 400);
-
+        DrawImageRT.sizeDelta = new Vector2(400, 400); //결과 고양이 사이즈 조절
 
         Invoke("CloseDraw", 0.0f);
-
-
-       
-
     }
-
 
     public void CloseDraw() // 뽑기 스크립트가 실행되고 자동으로 실행되게 합니다.
     {

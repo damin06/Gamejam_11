@@ -14,6 +14,8 @@ public class GameControl : MonoBehaviour
     public AudioSource CatSound;
     public AudioSource ButtonClick;
 
+    public int coin = 100;
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);

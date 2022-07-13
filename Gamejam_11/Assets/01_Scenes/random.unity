@@ -598,7 +598,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Start
+          m_StringArgument: Skin
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &895308183
@@ -1529,7 +1529,7 @@ MonoBehaviour:
   Image2: {fileID: 5548520357168695290, guid: 7497ab1ef94ddab439196b9fbd471aba, type: 3}
   Image3: {fileID: -8301733366215444871, guid: 7497ab1ef94ddab439196b9fbd471aba, type: 3}
   Image4: {fileID: -8783000068683995009, guid: 7497ab1ef94ddab439196b9fbd471aba, type: 3}
-  Image5: {fileID: 21300000, guid: 95c3a6737ba479046817499ce87f9872, type: 3}
+  Image5: {fileID: 8164190583815772287, guid: 7497ab1ef94ddab439196b9fbd471aba, type: 3}
   Gi1: {fileID: 1667724753}
   Gi2: {fileID: 1871802784}
   Gi3: {fileID: 1028481617}
@@ -1539,6 +1539,7 @@ MonoBehaviour:
   Result_PopUp: {fileID: 1822005483}
   Result_Btn: {fileID: 1478790864}
   Result_Text: {fileID: 250773254}
+  ExitButton: {fileID: 895308180}
   RandomInt: 1
 --- !u!1 &1667724753
 GameObject:
