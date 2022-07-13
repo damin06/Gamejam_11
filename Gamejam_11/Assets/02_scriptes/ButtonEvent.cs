@@ -67,12 +67,12 @@ public class ButtonEvent : MonoBehaviour
         if (GameControl.control.Language == true)
         {
             GameControl.control.Language = false;
-            optionManager.CatPosition();
+            //optionManager.CatPosition();
         }
         else
         {
             GameControl.control.Language = true;
-            optionManager.CatPosition();
+            //optionManager.CatPosition();
         }
     }
 
