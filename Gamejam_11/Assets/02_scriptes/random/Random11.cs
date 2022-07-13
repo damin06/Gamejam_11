@@ -130,7 +130,7 @@ public class Random11 : MonoBehaviour
             Result_Btn.SetActive(true);
             Result_Text.SetActive(true);
 
-            SkinChoose.skin.Cat2 = true;
+            SkinChoose.skin.Cat5 = true;
 
             Gi1.SetActive(true);
 
@@ -144,7 +144,7 @@ public class Random11 : MonoBehaviour
             Result_Btn.SetActive(true);
             Result_Text.SetActive(true);
 
-            SkinChoose.skin.Cat3 = true;
+            SkinChoose.skin.Cat4 = true;
 
             Gi2.SetActive(true);
 
@@ -158,7 +158,7 @@ public class Random11 : MonoBehaviour
             Result_Btn.SetActive(true);
             Result_Text.SetActive(true);
 
-            SkinChoose.skin.Cat4 = true;
+            SkinChoose.skin.Cat3 = true;
 
             Gi3.SetActive(true);
 
@@ -172,7 +172,7 @@ public class Random11 : MonoBehaviour
             Result_Btn.SetActive(true);
             Result_Text.SetActive(true);
 
-            SkinChoose.skin.Cat5 = true;
+            SkinChoose.skin.Cat2 = true;
 
             Gi4.SetActive(true);
 

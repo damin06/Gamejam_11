@@ -22,4 +22,11 @@ public class ExitManager : MonoBehaviour
             ExitTool.SetActive(false);
         }
     }
+
+    public void tlqkf()
+    {
+        ExitClick = true;
+        ExitTool.SetActive(true);
+        Debug.Log("tlqkffff");
+    }
 }

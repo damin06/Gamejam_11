@@ -492,6 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6217f05b19b61a547a44cdd259cecb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  catNumber: 0
 --- !u!4 &657482081
 Transform:
   m_ObjectHideFlags: 0
@@ -977,6 +978,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287630a6349db3c48846fc4519761495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Cat2: 0
+  Cat3: 0
+  Cat4: 0
+  Cat5: 0
+  Cat6: 0
+  SeclectCat: 1
 --- !u!4 &1123310139
 Transform:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ public class ButtonEvent : MonoBehaviour
     HelpManager helpManager;
     SkinHelpManager skinHelpManager;
     StartAmi startAmi;
+    UnLock unLock;
 
     private void Start()
     {
@@ -24,11 +25,12 @@ public class ButtonEvent : MonoBehaviour
         helpManager = FindObjectOfType<HelpManager>();
         skinHelpManager = FindObjectOfType<SkinHelpManager>();
         startAmi = FindObjectOfType<StartAmi>();
+        unLock = FindObjectOfType<UnLock>();
     }
 
     public void StartButton()
     {
-        GameControl.control.StartButton();
+        GameControl.control.CatButton();
         startAmi.AmiStart = true;
         startAmi.realStart();
     }
@@ -120,5 +122,13 @@ public class ButtonEvent : MonoBehaviour
     public void SKinHelpNoButton()
     {
         skinHelpManager.SkinHelpClick = false;
+    }
+
+    public int catNumber = 0;
+
+    public void CatChoose(int catNum)
+    {
+        catNumber = catNum;
+        unLock.catSeclect(catNumber);
     }
 }

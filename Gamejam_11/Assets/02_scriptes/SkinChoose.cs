@@ -12,6 +12,8 @@ public class SkinChoose : MonoBehaviour
     public bool Cat5 = false;
     public bool Cat6 = false;
 
+    public int SeclectCat = 1;
+
     private void Awake()
     {
         DontDestroyOnLoad(this);

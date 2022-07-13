@@ -11,12 +11,12 @@ public class GameControl : MonoBehaviour
     public bool SoundEffect = true;
     public bool Vibration = true;
 
-    public AudioSource StartButtonClick;
+    public AudioSource CatSound;
     public AudioSource ButtonClick;
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(this.gameObject);
 
         if (control == null)
         {
@@ -24,13 +24,13 @@ public class GameControl : MonoBehaviour
         }
         else if (control != this)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 
-    public void StartButton()
+    public void CatButton()
     {
-        StartButtonClick.Play();
+        CatSound.Play();
     }
 
     public void Button()
