@@ -5,16 +5,26 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 637931040989317736
     m_Hash: 3592690385
+=======
+      ticks: 637931922873617203
+    m_Hash: 3397724092
+>>>>>>> main
   m_LockFileStatus:
     m_FilePath: C:/Users/user/Documents/Gamejam_11/Gamejam_11/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 637931040989487158
     m_Hash: 352634217
+=======
+      ticks: 637931922873617203
+    m_Hash: 3365858521
+>>>>>>> main
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:

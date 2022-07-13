@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/01_Scenes/test.unity
+=======
+- path: Assets/01_Scenes/random.unity
+>>>>>>> main
   isLoaded: 1
   isActive: 1
   isSubScene: 0
