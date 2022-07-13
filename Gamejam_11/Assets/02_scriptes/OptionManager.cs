@@ -36,6 +36,15 @@ public class OptionManager : MonoBehaviour
     private void Start()
     {
         buttonEvent = FindObjectOfType<ButtonEvent>();
+
+        if (GameControl.control.Language == false)
+        {
+            Cat.transform.position = new Vector3(680, 1635, 0);
+        }
+        else
+        {
+            Cat.transform.position = new Vector3(542, 1317, 0);
+        }
     }
 
     void Update()
@@ -80,7 +89,7 @@ public class OptionManager : MonoBehaviour
 
     public void CatPosition()
     {
-        if (GameControl.control.Language == true)
+        if (GameControl.control.Language == false)
         {
             Cat.transform.position = new Vector3(680, 1635, 0);
         }
@@ -121,6 +130,7 @@ public class OptionManager : MonoBehaviour
             SoundEffect_On.SetActive(true);
             SoundEffect_Off.SetActive(false);
             GameControl.control.SoundEffect = true;
+            GameControl.control.Button();
         }
     }
 
