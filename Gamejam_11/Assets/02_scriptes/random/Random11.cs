@@ -7,6 +7,7 @@ public class Random11 : MonoBehaviour
 {
     // public
     AudioSource audioSource;
+    AudioSource audioSource2;
 
 
     // 활성화,비활성화 할 오브젝트
@@ -39,7 +40,7 @@ public class Random11 : MonoBehaviour
 
 
 
-    public Sprite Nomoney;
+    public Sprite RanCats;
 
     public GameObject Result_PopUp;
     public GameObject Result_Btn;
@@ -52,6 +53,7 @@ public class Random11 : MonoBehaviour
     private void Awake()
     {
         audioSource = GameObject.Find("Celebration").GetComponent<AudioSource>();
+        audioSource2 = GameObject.Find("Linging").GetComponent<AudioSource>();
     }
 
 
@@ -74,6 +76,8 @@ public class Random11 : MonoBehaviour
                 DrawShop.SetActive(false); //뽑기 선택 화면을 비활성화하고,
                 DrawWindow.SetActive(true);// 랜덤 이미지를 출력한 화면을 활성화합니다.
 
+                StartCoroutine("Audio");
+
                 StartCoroutine("RandomOn");
                 
             }
@@ -82,22 +86,32 @@ public class Random11 : MonoBehaviour
 
         
     }
+    IEnumerator Audio()
+    {
+        audioSource2.Play();
+        yield return new WaitForSeconds(1.0f);
+        audioSource2.Play();
+        yield return new WaitForSeconds(1.0f);
+        audioSource2.Play();
+    }
     IEnumerator RandomOn()
     {
+        
+
         currenttime = 0;
         for (int i = 0; i <= 7; i++)
         {
             DrawImage.sprite = Image1;
-            yield return new WaitForSeconds(0.04f);
+            yield return new WaitForSeconds(0.1f);
            
             DrawImage.sprite = Image2;
-            yield return new WaitForSeconds(0.04f);
+            yield return new WaitForSeconds(0.1f);
             
             DrawImage.sprite = Image3;
-            yield return new WaitForSeconds(0.04f);
+            yield return new WaitForSeconds(0.1f);
             
             DrawImage.sprite = Image4;
-            yield return new WaitForSeconds(0.04f);
+            yield return new WaitForSeconds(0.1f);
             
             DrawImage.sprite = Image5;
             
@@ -166,7 +180,7 @@ public class Random11 : MonoBehaviour
         }
         
         
-        Invoke("CloseDraw", 1f);
+        Invoke("CloseDraw", 0.0f);
 
 
        
@@ -176,7 +190,7 @@ public class Random11 : MonoBehaviour
 
     public void CloseDraw() // 뽑기 스크립트가 실행되고 자동으로 실행되게 합니다.
     {
-        DrawImage.sprite = Nomoney; // 적용했던 이미지를 초기화합니다.
+        DrawImage.sprite = RanCats; // 적용했던 이미지를 초기화합니다.
         DrawShop.SetActive(true); // 뽑기 선택 화면을 활성화 하고,
         DrawWindow.SetActive(false); // 랜덤 이미지 화면을 비활성화합니다
     }
