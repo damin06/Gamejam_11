@@ -7,9 +7,6 @@ public class GameControl : MonoBehaviour
     public static GameControl control;
 
     public bool Language = true;
-    public bool Sound = true;
-    public bool SoundEffect = true;
-    public bool Vibration = true;
 
     private void Awake()
     {
