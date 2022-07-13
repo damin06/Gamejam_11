@@ -60,19 +60,29 @@ public class ButtonEvent : MonoBehaviour
     {
         if (GameControl.control.Language == true)
         {
+            optionManager.CatPosition();
             GameControl.control.Language = false;
         }
         else
         {
+            optionManager.CatPosition();
             GameControl.control.Language = true;
         }
     }
 
-    public bool Sound = true;
-
     public void Option_Sound()
     {
         optionManager.Sound_on_off();
+    }
+
+    public void Option_SoundEffect()
+    {
+        optionManager.SoundEffect_on_off();
+    }
+
+    public void Option_Vibration()
+    {
+        optionManager.Vibration_on_off();
     }
 
 

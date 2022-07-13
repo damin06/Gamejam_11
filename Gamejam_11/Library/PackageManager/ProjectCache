@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637931922873617203
+      ticks: 637931118815236133
     m_Hash: 3397724092
   m_LockFileStatus:
     m_FilePath: C:/Users/user/Documents/GitHub/Gamejam_11/Gamejam_11/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637931922873617203
+      ticks: 637931118815236133
     m_Hash: 3365858521
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
