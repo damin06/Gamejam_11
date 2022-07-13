@@ -20,6 +20,7 @@ public class Random11 : MonoBehaviour
 
     // 불러올 이미지 오브젝트
     public Image DrawImage; // 랜덤 이미지를 출력할 오브젝트
+    public RectTransform DrawImageRT; // 랜덤 이미지 출력할 오브젝트 렉트 트랜스폼
 
     //숫자 이미지
     public Sprite Image1;
@@ -52,8 +53,8 @@ public class Random11 : MonoBehaviour
     public int RandomInt; // 랜덤 변수
     private void Awake()
     {
-        audioSource = GameObject.Find("Celebration").GetComponent<AudioSource>();
-        audioSource2 = GameObject.Find("Linging").GetComponent<AudioSource>();
+        audioSource = GameObject.Find("CelebrationSound").GetComponent<AudioSource>();
+        audioSource2 = GameObject.Find("LingingSound").GetComponent<AudioSource>();
     }
 
 
@@ -67,6 +68,8 @@ public class Random11 : MonoBehaviour
 
     public void OneDraw() // 1회 뽑기 버튼을 클릭 시
     {
+        // 여기
+        DrawImageRT.sizeDelta = new Vector2(400, 400);
         if (currenttime > 1.3f)
         {
             if (CoinManager.Coin >= 10)
@@ -127,6 +130,8 @@ public class Random11 : MonoBehaviour
             Result_Btn.SetActive(true);
             Result_Text.SetActive(true);
 
+            SkinChoose.skin.Cat2 = true;
+
             Gi1.SetActive(true);
 
         }
@@ -138,6 +143,8 @@ public class Random11 : MonoBehaviour
             Result_PopUp.SetActive(true);
             Result_Btn.SetActive(true);
             Result_Text.SetActive(true);
+
+            SkinChoose.skin.Cat3 = true;
 
             Gi2.SetActive(true);
 
@@ -151,6 +158,8 @@ public class Random11 : MonoBehaviour
             Result_Btn.SetActive(true);
             Result_Text.SetActive(true);
 
+            SkinChoose.skin.Cat4 = true;
+
             Gi3.SetActive(true);
 
         }
@@ -162,6 +171,8 @@ public class Random11 : MonoBehaviour
             Result_PopUp.SetActive(true);
             Result_Btn.SetActive(true);
             Result_Text.SetActive(true);
+
+            SkinChoose.skin.Cat5 = true;
 
             Gi4.SetActive(true);
 
@@ -175,11 +186,15 @@ public class Random11 : MonoBehaviour
             Result_Btn.SetActive(true);
             Result_Text.SetActive(true);
 
+            SkinChoose.skin.Cat6 = true;
+
             Gi5.SetActive(true);
 
         }
-        
-        
+        // 여기
+        DrawImageRT.sizeDelta = new Vector2(400, 400);
+
+
         Invoke("CloseDraw", 0.0f);
 
 
