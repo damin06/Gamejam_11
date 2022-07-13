@@ -31,6 +31,7 @@ public class FEVER : MonoBehaviour
             
         if(IsFEVER)
         {   
+            
                 CurrenTime-=Time.deltaTime;  
                   FEVERSLIDER.value= CurrenTime / FEVERTIME;
             FEVERSLIDER.gameObject.SetActive(true);

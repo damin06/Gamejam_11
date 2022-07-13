@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
-
+GameObject objecta;
     void Start()
     {
        
@@ -13,7 +13,8 @@ public class test : MonoBehaviour
     }
     void FixedUpdate()
     {
-       
-        transform.Rotate (0,0,Input.gyro.rotationRateUnbiased.z*4);
+    Vector3 minusvec=new Vector3(0,-90,0);
+        transform.Rotate (0,0,Input.gyro.rotationRateUnbiased.z*0.7f);
+    
     }
 }
