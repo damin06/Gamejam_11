@@ -14,6 +14,7 @@ public class ButtonEvent : MonoBehaviour
     ExitManager exitManager;
     OptionManager optionManager;
     HelpManager helpManager;
+    SkinHelpManager skinHelpManager;
     StartAmi startAmi;
 
     private void Start()
@@ -21,6 +22,7 @@ public class ButtonEvent : MonoBehaviour
         exitManager = FindObjectOfType<ExitManager>();
         optionManager = FindObjectOfType<OptionManager>();
         helpManager = FindObjectOfType<HelpManager>();
+        skinHelpManager = FindObjectOfType<SkinHelpManager>();
         startAmi = FindObjectOfType<StartAmi>();
     }
 
@@ -73,17 +75,16 @@ public class ButtonEvent : MonoBehaviour
         if (GameControl.control.Language == true)
         {
             GameControl.control.Language = false;
-            //optionManager.CatPosition();
         }
         else
         {
             GameControl.control.Language = true;
-            //optionManager.CatPosition();
         }
     }
 
     public void Option_Sound()
     {
+        GameControl.control.Button();
         optionManager.Sound_on_off();
     }
 
@@ -94,6 +95,7 @@ public class ButtonEvent : MonoBehaviour
 
     public void Option_Vibration()
     {
+        GameControl.control.Button();
         optionManager.Vibration_on_off();
     }
 
@@ -104,8 +106,19 @@ public class ButtonEvent : MonoBehaviour
         helpManager.HelpClick = true;
     }
 
+    public void SkinHelpButton()
+    {
+        GameControl.control.Button();
+        skinHelpManager.SkinHelpClick = true;
+    }
+
     public void HelpNoButton()
     {
         helpManager.HelpClick = false;
+    }
+
+    public void SKinHelpNoButton()
+    {
+        skinHelpManager.SkinHelpClick = false;
     }
 }
