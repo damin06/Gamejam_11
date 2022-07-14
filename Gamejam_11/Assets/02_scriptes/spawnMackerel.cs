@@ -8,6 +8,8 @@ public class spawnMackerel : MonoBehaviour
         [SerializeField]GameObject Mackerel;
             [SerializeField]private float spawnMIN;
     [SerializeField]private float spawnMAX;
+    [SerializeField]Transform llimitMINPOS;
+    [SerializeField]Transform limitMAXPOS;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +27,8 @@ public class spawnMackerel : MonoBehaviour
         {
                     float a = Random.Range(spawnMIN,spawnMAX);
               yield return new WaitForSeconds(a);
-            float posX=Random.Range(Stagedata.LimitMin.x, Stagedata.LimitMax.x);
-             float posY=Random.Range(Stagedata.LimitMin.y, Stagedata.LimitMax.y);
+            float posX=Random.Range(llimitMINPOS.position.x, limitMAXPOS.position.x);
+             float posY=Random.Range(llimitMINPOS.position.y,limitMAXPOS.position.y);
                  Instantiate(Mackerel,new Vector3(posX, posY),Quaternion.identity);
         }
     }

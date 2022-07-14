@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class score : MonoBehaviour
 {
     [SerializeField]Text timeText;
-    private float time;
+    public static float time;
 
     void Update()
     {

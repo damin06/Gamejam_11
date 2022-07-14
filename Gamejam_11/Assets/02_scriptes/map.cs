@@ -5,7 +5,7 @@ using UnityEngine;
 public class map : MonoBehaviour
 {
     int randommap;
-    private float Xpos=1428;
+    public static float Xpos=1428;
     [SerializeField]GameObject a;
      [SerializeField]GameObject b;
       [SerializeField]GameObject c;
@@ -18,16 +18,17 @@ public class map : MonoBehaviour
    [SerializeField]GameObject mapImageD;
   int randmomImage;
   private   float MAPXpos=1474;
+  public static float limitMinMapPos=1370;
     void Start()
     {
       randmomImage=Random.Range(0,4);
         parents= GameObject.Find("mapCONTROL").transform;
         randommap=Random.Range(0,3);
-        for(int i=0; i<50; i++)
+        for(int i=0; i<3; i++)
         {
   BackGroundSpawn();
         }
-    for(int i=0; i<50; i++)
+    for(int i=0; i<3; i++)
         {
   MapSpawn();
         }
@@ -39,36 +40,47 @@ public class map : MonoBehaviour
     {
         
     }
-    void BackGroundSpawn()
+    public  void BackGroundSpawn()
     {
           
               Vector3 vec1 = new Vector3(Xpos,-135.03f,0);
         switch(randmomImage)
         {
             case 0 :
-                Instantiate(mapImageA,vec1,Quaternion.identity);
+           gameObject.transform.position=new Vector3(Xpos-116.4f,-135.03f,0);
+               GameObject clonA= Instantiate(mapImageA,vec1,Quaternion.identity);
                 Xpos+=116.4f;
+               // clonA.transform.parent= parents;
+                limitMinMapPos+=116.4f;
                 break;
            case 1 : 
-                Instantiate(mapImageC,vec1,Quaternion.identity);
-                Xpos+=124.4f;
+                   gameObject.transform.position=new Vector3(Xpos-124.4f,-135.03f,0);
+                GameObject clonC= Instantiate(mapImageC,vec1,Quaternion.identity);
+                Xpos+=123;
+                //clonC.transform.parent= parents;
+                limitMinMapPos+=123;
                 break;
             case 2 :
-                 Instantiate(mapImageB,vec1,Quaternion.identity);
+                    gameObject.transform.position=new Vector3(Xpos-128,-135.03f,0);
+               GameObject clonB =  Instantiate(mapImageB,vec1,Quaternion.identity);
                 Xpos+=128;
+                limitMinMapPos+=128;
+                   //       clonB.transform.parent= parents;
                 break;
                 case 3 :
-                     Instantiate(mapImageD,vec1,Quaternion.identity);
+                        gameObject.transform.position=new Vector3(Xpos-117.8f,-135.03f,0);
+                 GameObject clonD = Instantiate(mapImageD,vec1,Quaternion.identity);
                 Xpos+=117.8f;
+                limitMinMapPos+=-117.8f;
+                     //     clonD.transform.parent= parents;
                 break;
         }
-
-         
+    
     }
-    void MapSpawn()
+    public void MapSpawn()
     {
       
-        Vector3 vec= new Vector3(MAPXpos,-121.83f,0);
+        Vector3 vec= new Vector3(MAPXpos,-134.6f,0);
     switch(randommap)
     {
         case 0 : 
@@ -93,4 +105,16 @@ public class map : MonoBehaviour
          MAPXpos+=131;
       randommap=Random.Range(0,3);
     }
+          private void OnTriggerEnter2D(Collider2D other) 
+     {  
+        
+    Debug.Log("아 제발");
+         if(other.CompareTag("Player"))
+         {
+            BackGroundSpawn();
+            MapSpawn();
+            BackGroundSpawn();
+            MapSpawn();
+        }
+     }   
 }

@@ -8,39 +8,36 @@ public class Player : MonoBehaviour
 {
      [SerializeField]Sprite JumpSprite;  
      [SerializeField]Sprite justcat;
+     [SerializeField]Sprite catDie;
        [SerializeField]private float speed;
      Vector3 vec = Vector3.right;
      float movementscale=24;
-     private float jumptime=1;
+     private float jumptime=1.8f;
 
      Rigidbody2D rd;
        bool isGround=false;
         bool isrun=false;
        SpriteRenderer spriteRen;
        bool islevitation=false;
+       bool isDIe=false;
        public float jumpPower=8;
        bool ispushedRunButton=false;  
        bool ispushedFeatButton=false;
        private float CurrenTime=4;
-
-    // Start is called before the first frame update
+      private Vector3 playerPos;
     void Start()
     {
         spriteRen=GetComponent<SpriteRenderer>();
        //Input.gyro.enabled =true;
          rd=GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-
-// Vector3 adforce = new Vector3(0,0,Input.gyro.rotationRateUnbiased.z);
-//           Vector3 force = Vector3.zero;
-//           force.y = Vector3.Dot(Input.gyro.gravity, Vector3.up)* movementscale;
-//          rd.AddForce(force);
-//          //rd.AddForce(Vector3.forward*movementscale);
-  
+  if(FEVER.IsFEVER)
+  {
+     FEVER.IsFEVER=!FEVER.IsFEVER;
+     
+  }
        if(isGround==false)
        {
           jumptime-=Time.deltaTime;
@@ -50,16 +47,12 @@ public class Player : MonoBehaviour
           islevitation=true;
           }
        }
-       else
+       else if(ispushedRunButton==false && isGround && isDIe==false)
        {
-          jumptime=1;
+          jumptime=1.8f;
          spriteRen.sprite=justcat;
           islevitation=false;
        }
-     
-    }
-    private void feat()
-    {
      
     }
 IEnumerator featCat()
@@ -73,19 +66,25 @@ IEnumerator featCat()
   {
          
         CurrenTime+=Time.deltaTime;
-   transform.rotation *= Quaternion.Euler(Time.deltaTime * 0f, 0f, -360f);
-     if(CurrenTime>10)
+   //transform.rotation *= Quaternion.Euler(Time.deltaTime * 0f, 0f, -360f);
+   transform.Rotate(new Vector3(0,0,1)* 360 * Time.deltaTime);
+     if(CurrenTime>4.7f && isDIe==false)
      {
+          transform.rotation =Quaternion.Euler(0,0,0);
           CurrenTime=4;
+          score.time+=10;
           ispushedFeatButton=false;
      }
   }
   
-     
+     if(isDIe)
+     {
+             transform.rotation =Quaternion.Euler(0,0,0);
+     }
 
     if(ispushedRunButton)
     {
-     if(isGround)
+     if(isGround && isDIe==false)
      {
          transform.position+=vec*speed*Time.deltaTime;
      }
@@ -116,11 +115,13 @@ IEnumerator featCat()
 }
 private void OnCollisionEnter2D(Collision2D collision)
 {
-     // if(collision.gameObject.CompareTag("Mackerel"))
-     // {
-     //          Destroy(collision.gameObject);
-     //      CoinManager.CoinCounter++;
-     // }
+        if(ispushedFeatButton && collision.gameObject.CompareTag("Ground"))
+     {
+          isDIe=true;
+          Debug.Log("개못하네");
+            spriteRen.sprite=catDie;
+     }
+
          
 if(collision.gameObject.CompareTag("Ground"))
 {
@@ -138,6 +139,7 @@ private void OnCollisionExit2D(Collision2D collision)
 }
 private void OnCollisionStay2D(Collision2D collision)
 {
+  
     if(collision.gameObject.CompareTag("Ground"))
 {
      Debug.Log("와우");
@@ -158,7 +160,7 @@ isGround=true;
 //312-0176-0316-51 농협 고다민
 public void JumpButton()
 {
-  if(isGround)
+  if(isGround && isDIe == false)
       {
           rd.AddForce(Vector2.up* jumpPower , ForceMode2D.Impulse);
       }
@@ -170,7 +172,7 @@ ispushedRunButton = true;
 public void RunButtonPUSH()
 {
      Debug.Log("우와");
-     if(islevitation && CurrenTime>3)
+     if(islevitation && CurrenTime>3 && isDIe == false)
      {
           Debug.Log("와아");
      spriteRen.sprite=justcat;  
