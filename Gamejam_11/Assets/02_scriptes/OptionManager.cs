@@ -28,6 +28,8 @@ public class OptionManager : MonoBehaviour
     [SerializeField] Text Help;
     [SerializeField] Text HelpText1;
     [SerializeField] Text HelpText2;
+    [SerializeField] Text BestScore;
+    [SerializeField] Text Score;
 
 
     public GameObject Title_English;
@@ -100,6 +102,8 @@ public class OptionManager : MonoBehaviour
             Help.text = "도움";
             HelpText1.text = "화면을 기울여 맵을 기울일 수 있습니다.";
             HelpText2.text = "고양이는 구르거나 점프할 수 있습니다.";
+            BestScore.text = "최고점수\n0";
+            Score.text = "현재점수\n0";
         }
         else
         {
@@ -113,6 +117,8 @@ public class OptionManager : MonoBehaviour
             Help.text = "Help";
             HelpText1.text = "You can tile the screen to tilt the map.";
             HelpText2.text = "Cat can roll and jump";
+            BestScore.text = "BestScore\n0";
+            Score.text = "Score\n0";
         }
     }
 

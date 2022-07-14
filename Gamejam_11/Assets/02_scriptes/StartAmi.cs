@@ -33,7 +33,7 @@ public class StartAmi : MonoBehaviour
 
     public void realStart()
     {
-        Invoke("realrealStart", 0.7f);
+        Invoke("realrealStart", 0.5f);
     }
 
     public void realrealStart()

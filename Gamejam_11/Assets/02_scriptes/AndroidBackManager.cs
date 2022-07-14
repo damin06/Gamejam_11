@@ -9,6 +9,7 @@ public class AndroidBackManager : MonoBehaviour
     OptionManager optionManager;
     HelpManager helpManager;
     SkinHelpManager skinHelpManager;
+    Random11 random11;
 
     private void Start()
     {
@@ -16,6 +17,7 @@ public class AndroidBackManager : MonoBehaviour
         optionManager = FindObjectOfType<OptionManager>();
         helpManager = FindObjectOfType<HelpManager>();
         skinHelpManager = FindObjectOfType<SkinHelpManager>();
+        random11 = FindObjectOfType<Random11>();
     }
 
     void Update()
@@ -26,7 +28,7 @@ public class AndroidBackManager : MonoBehaviour
             {
                 if (exitManager.ExitClick == true)
                 {
-                    if (Input.GetKey(KeyCode.Escape))
+                    if (Input.GetKeyDown(KeyCode.Escape))
                     {
                         GameControl.control.Button();
                         exitManager.ExitClick = false;
@@ -34,18 +36,17 @@ public class AndroidBackManager : MonoBehaviour
                 }
                 else if (optionManager.click == false && helpManager.HelpClick == false)
                 {
-                    if (Input.GetKey(KeyCode.Escape))
+                    if (Input.GetKeyDown(KeyCode.Escape))
                     {
                         GameControl.control.Button();
                         exitManager.ExitClick = true;
                     }
                 }
-
             }
 
             if (SceneManager.GetActiveScene().name == "Skin")
             {
-                if (Input.GetKey(KeyCode.Escape))
+                if (Input.GetKeyDown(KeyCode.Escape))
                 {
                     GameControl.control.Button();
                     SceneManager.LoadScene("Start");
@@ -54,7 +55,7 @@ public class AndroidBackManager : MonoBehaviour
 
             if (SceneManager.GetActiveScene().name == "random")
             {
-                if (Input.GetKey(KeyCode.Escape))
+                if (Input.GetKeyDown(KeyCode.Escape) && random11.gachabutton == true)
                 {
                     GameControl.control.Button();
                     SceneManager.LoadScene("Skin");
@@ -63,7 +64,7 @@ public class AndroidBackManager : MonoBehaviour
 
             if (optionManager.click == true)
             {
-                if (Input.GetKey(KeyCode.Escape))
+                if (Input.GetKeyDown(KeyCode.Escape))
                 {
                     GameControl.control.Button();
                     optionManager.click = false;
@@ -72,7 +73,7 @@ public class AndroidBackManager : MonoBehaviour
 
             if (helpManager.HelpClick == true)
             {
-                if (Input.GetKey(KeyCode.Escape))
+                if (Input.GetKeyDown(KeyCode.Escape))
                 {
                     GameControl.control.Button();
                     helpManager.HelpClick = false;

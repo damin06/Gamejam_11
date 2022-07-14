@@ -48,6 +48,10 @@ public class Random11 : MonoBehaviour
     public GameObject skinAll;
     public GameObject skinAllBackGround;
 
+
+    public GameObject GachaButton;
+
+
     // 변수
     public int RandomInt; // 랜덤 변수
 
@@ -81,7 +85,7 @@ public class Random11 : MonoBehaviour
 
                 StartCoroutine("RandomOn");
 
-                //Gacha();
+                Button();
             }
 
             if (GachaList.Count == 0)
@@ -90,6 +94,21 @@ public class Random11 : MonoBehaviour
                 skinAllBackGround.SetActive(true);
             }
         }
+    }
+
+    public bool gachabutton = true;
+
+    public void Button()
+    {
+        gachabutton = false;
+        GachaButton.SetActive(false);
+        Invoke("ButtonLate", 3.25f);
+    }
+
+    public void ButtonLate()
+    {
+        gachabutton = true;
+        GachaButton.SetActive(true);
     }
 
     public void skinAllNo()
