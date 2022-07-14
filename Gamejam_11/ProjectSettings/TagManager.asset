@@ -11,6 +11,7 @@ TagManager:
   - V
   - E2
   - R
+  - cloud
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - Ground
   - Mackerel
-  - 
+  - cloud
   - 
   - 
   - 

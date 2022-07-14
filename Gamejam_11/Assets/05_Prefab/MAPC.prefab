@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 8023846493256138909}
   - component: {fileID: 1427416062917974435}
   - component: {fileID: 3183956461943120958}
+  - component: {fileID: 6451928893940162124}
   m_Layer: 6
   m_Name: MAPC
   m_TagString: Ground
@@ -183,6 +184,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 264bf891d4acda043b4b04cd16330ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6451928893940162124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438290673042697325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c00cfb5af46564d830912e2020f0b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6601808287122641590
