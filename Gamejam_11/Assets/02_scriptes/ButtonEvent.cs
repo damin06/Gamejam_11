@@ -7,12 +7,14 @@ public class ButtonEvent : MonoBehaviour
 {
     public void SceneLoader(string sceneName)
     {
+        GameControl.control.Button();
         SceneManager.LoadScene(sceneName);
     }
 
     ExitManager exitManager;
     OptionManager optionManager;
     HelpManager helpManager;
+    SkinHelpManager skinHelpManager;
     StartAmi startAmi;
 
     private void Start()
@@ -20,16 +22,25 @@ public class ButtonEvent : MonoBehaviour
         exitManager = FindObjectOfType<ExitManager>();
         optionManager = FindObjectOfType<OptionManager>();
         helpManager = FindObjectOfType<HelpManager>();
+        skinHelpManager = FindObjectOfType<SkinHelpManager>();
         startAmi = FindObjectOfType<StartAmi>();
     }
 
     public void StartButton()
     {
+        GameControl.control.StartButton();
         startAmi.AmiStart = true;
+        startAmi.realStart();
+    }
+
+    public void GameStart()
+    {
+        SceneManager.LoadScene("test");
     }
 
     public void ExitButton()
     {
+        GameControl.control.Button();
         exitManager.ExitClick = true;
     }
 
@@ -47,6 +58,7 @@ public class ButtonEvent : MonoBehaviour
 
     public void OptionButton()
     {
+        GameControl.control.Button();
         optionManager.click = true;
     }
 
@@ -58,20 +70,21 @@ public class ButtonEvent : MonoBehaviour
 
     public void Option_Language()
     {
+        GameControl.control.Button();
+
         if (GameControl.control.Language == true)
         {
-            optionManager.CatPosition();
             GameControl.control.Language = false;
         }
         else
         {
-            optionManager.CatPosition();
             GameControl.control.Language = true;
         }
     }
 
     public void Option_Sound()
     {
+        GameControl.control.Button();
         optionManager.Sound_on_off();
     }
 
@@ -82,17 +95,30 @@ public class ButtonEvent : MonoBehaviour
 
     public void Option_Vibration()
     {
+        GameControl.control.Button();
         optionManager.Vibration_on_off();
     }
 
 
     public void HelpButton()
     {
+        GameControl.control.Button();
         helpManager.HelpClick = true;
+    }
+
+    public void SkinHelpButton()
+    {
+        GameControl.control.Button();
+        skinHelpManager.SkinHelpClick = true;
     }
 
     public void HelpNoButton()
     {
         helpManager.HelpClick = false;
+    }
+
+    public void SKinHelpNoButton()
+    {
+        skinHelpManager.SkinHelpClick = false;
     }
 }

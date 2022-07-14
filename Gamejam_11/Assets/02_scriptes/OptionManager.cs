@@ -19,7 +19,6 @@ public class OptionManager : MonoBehaviour
 
 
     ButtonEvent buttonEvent;
-    [SerializeField] Text Title;
     [SerializeField] Text Exit;
     [SerializeField] Text ExitNo;
     [SerializeField] Text ExitYes;
@@ -30,12 +29,49 @@ public class OptionManager : MonoBehaviour
     [SerializeField] Text HelpText2;
 
 
-    public GameObject Cat;
+    public GameObject Title_English;
+    public GameObject Title_Korea;
 
 
     private void Start()
     {
         buttonEvent = FindObjectOfType<ButtonEvent>();
+
+        if (GameControl.control.Sound == true)
+        {
+            startBGM.volume = 1;
+            Sound_On.SetActive(true);
+            Sound_Off.SetActive(false);
+        }
+        else
+        {
+            startBGM.volume = 0;
+            Sound_On.SetActive(false);
+            Sound_Off.SetActive(true);
+        }
+
+        if (GameControl.control.SoundEffect == true)
+        {
+            SoundEffect_On.SetActive(true);
+            SoundEffect_Off.SetActive(false);
+        }
+        else
+        {
+            SoundEffect_On.SetActive(false);
+            SoundEffect_Off.SetActive(true);
+        }
+
+        if (GameControl.control.Vibration == true)
+        {
+            Vibration_On.SetActive(true);
+            Vibration_Off.SetActive(false);
+        }
+        else
+        {
+            Handheld.Vibrate();
+            Vibration_On.SetActive(false);
+            Vibration_Off.SetActive(true);
+        }
     }
 
     void Update()
@@ -54,7 +90,8 @@ public class OptionManager : MonoBehaviour
 
         if (GameControl.control.Language == false)
         {
-            Title.text = "고양이 구르다";
+            Title_Korea.SetActive(true);
+            Title_English.SetActive(false);
             Exit.text = "정말 나가실건가요?";
             ExitNo.text = "아니요";
             ExitYes.text = "네";
@@ -66,7 +103,8 @@ public class OptionManager : MonoBehaviour
         }
         else
         {
-            Title.text = "Cat Roll";
+            Title_Korea.SetActive(false);
+            Title_English.SetActive(true);
             Exit.text = "Are you really going out?";
             ExitNo.text = "No";
             ExitYes.text = "Yes";
@@ -75,18 +113,6 @@ public class OptionManager : MonoBehaviour
             Help.text = "Help";
             HelpText1.text = "You can tile the screen to tilt the map.";
             HelpText2.text = "Cat can roll and jump";
-        }
-    }
-
-    public void CatPosition()
-    {
-        if (GameControl.control.Language == true)
-        {
-            Cat.transform.position = new Vector3(680, 1635, 0);
-        }
-        else
-        {
-            Cat.transform.position = new Vector3(542, 1317, 0);
         }
     }
 
@@ -121,6 +147,7 @@ public class OptionManager : MonoBehaviour
             SoundEffect_On.SetActive(true);
             SoundEffect_Off.SetActive(false);
             GameControl.control.SoundEffect = true;
+            GameControl.control.Button();
         }
     }
 
