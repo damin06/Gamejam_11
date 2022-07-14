@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SkinManager : MonoBehaviour
 {
-    static public int White = 0;
-    static public int Gray = 0;
-    static public int Black = 0;
-    static public int Threecol = 0;
-    static public int Sham = 0;
+    public int White = 0;
+    public int Gray = 0;
+    public int Black = 0;
+    public int Threecol = 0;
+    public int Sham = 0;
 
     public void Start()
     {

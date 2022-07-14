@@ -13,11 +13,7 @@ public class SkinChoose : MonoBehaviour
     public bool Cat6 = false;
 
     public int SeclectCat = 1;
-    
-        private void Update()
-    {
-        PlayerPrefs.SetInt("skin", SeclectCat);
-    }
+
 
     private void Awake()
     {

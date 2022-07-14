@@ -18,8 +18,8 @@ public class GameOver : MonoBehaviour
     [SerializeField]Text moneyTXT;
     void Awakeart()
     {
-        playe.transform.position = playerpos.transform.position;
-        gamererode();
+        
+     gamererode();
     }   
 void gamererode()
 {
@@ -31,7 +31,6 @@ void gamererode()
 
         if(Player.isDIe ==true)
         {
-            playe.transform.position = playerpos.transform.position;
             Time.timeScale=0;   
             GamePause();
         }
@@ -43,13 +42,8 @@ void gamererode()
         scoreimage.gameObject.SetActive(true);
         scoreTXT.gameObject.SetActive(true);
         moneyTXT.gameObject.SetActive(true);
-        int nowscore = (int)score.time;
-        float a = score.time / 10;
-        int nowmoney = (int)a;
-        PlayerPrefs.SetInt("score", nowscore);
-        PlayerPrefs.SetInt("money",nowmoney);
         scoreTXT.text="  "+string.Format("{0:N0}", score.time);
-        moneyTXT.text="  "+a;
+        moneyTXT.text="  "+score.time/10;
         ok.gameObject.SetActive(true);
         white.gameObject.SetActive(true);
         black.gameObject.SetActive(true);
@@ -58,7 +52,7 @@ void gamererode()
     {
         Player.isDIe = false;
                Time.timeScale=1;   
-           
+               playe.transform.position=playerpos.transform.position;
                  //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("Start");
      

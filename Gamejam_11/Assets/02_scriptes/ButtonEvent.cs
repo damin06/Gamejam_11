@@ -11,6 +11,11 @@ public class ButtonEvent : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void HomeButton(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
     ExitManager exitManager;
     OptionManager optionManager;
     HelpManager helpManager;
@@ -50,12 +55,13 @@ public class ButtonEvent : MonoBehaviour
 
     public void ExitYesButton()
     {
-        Debug.Log("???? ????");
+        Debug.Log("게임 종료");
         Application.Quit();
     }
 
     public void ExitNoButton()
     {
+        GameControl.control.Button();
         exitManager.ExitClick = false;
     }
 
