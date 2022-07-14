@@ -72,7 +72,7 @@ public class Random11 : MonoBehaviour
         DrawImageRT.sizeDelta = new Vector2(400, 400); //고양이 사이즈 조절
         if (currenttime > 1.3f)
         {
-            if (GameControl.control.coin >= 100 && GachaList.Count != 0)
+            if (GameControl.control.coin >= 100)
             {
                 ExitButton.SetActive(false);
 
@@ -88,7 +88,7 @@ public class Random11 : MonoBehaviour
                 Button();
             }
 
-            if (GachaList.Count == 0)
+            if (SkinChoose.skin.Cat2 == true && SkinChoose.skin.Cat3 == true && SkinChoose.skin.Cat4 == true && SkinChoose.skin.Cat5 == true && SkinChoose.skin.Cat6 == true)
             {
                 skinAll.SetActive(true);
                 skinAllBackGround.SetActive(true);
@@ -150,6 +150,12 @@ public class Random11 : MonoBehaviour
         Gacha();
     }
 
+    public int cat22 = PlayerPrefs.GetInt("Cat2");
+    public int cat33 = PlayerPrefs.GetInt("Cat3");
+    public int cat44 = PlayerPrefs.GetInt("Cat4");
+    public int cat55 = PlayerPrefs.GetInt("Cat5");
+    public int cat66 = PlayerPrefs.GetInt("Cat6");
+
     public List<string> GachaList = new List<string>() { "cat2", "cat3", "cat4", "cat5", "cat6" };
 
     public void Gacha()
@@ -167,10 +173,12 @@ public class Random11 : MonoBehaviour
                 ExitButton.SetActive(true);
 
                 SkinChoose.skin.Cat5 = true;
-
+            PlayerPrefs.SetInt("White", 1);
                 Gi1.SetActive(true);
 
             GachaList.RemoveAt(rand);
+
+                PlayerPrefs.SetInt("Cat2", 1);
         }
         else if (GachaList[rand] == "cat4")
         {
@@ -183,10 +191,12 @@ public class Random11 : MonoBehaviour
                 ExitButton.SetActive(true);
 
                 SkinChoose.skin.Cat4 = true;
-
-                Gi2.SetActive(true);
+            PlayerPrefs.SetInt("Black", 1);
+            Gi2.SetActive(true);
 
             GachaList.RemoveAt(rand);
+
+            PlayerPrefs.SetInt("Cat3", 1);
         }
         else if (GachaList[rand] == "cat3")
         {
@@ -199,10 +209,12 @@ public class Random11 : MonoBehaviour
                 ExitButton.SetActive(true);
 
                 SkinChoose.skin.Cat3 = true;
-
-                Gi3.SetActive(true);
+            PlayerPrefs.SetInt("Gray", 1);
+            Gi3.SetActive(true);
 
             GachaList.RemoveAt(rand);
+
+            PlayerPrefs.SetInt("Cat4", 1);
         }
         else if (GachaList[rand] == "cat2")
         {
@@ -215,10 +227,12 @@ public class Random11 : MonoBehaviour
                 ExitButton.SetActive(true);
 
                 SkinChoose.skin.Cat2 = true;
-
-                Gi4.SetActive(true);
+            PlayerPrefs.SetInt("3col", 1);
+            Gi4.SetActive(true);
 
             GachaList.RemoveAt(rand);
+
+            PlayerPrefs.SetInt("Cat5", 1);
         }
         else
         {
@@ -235,14 +249,15 @@ public class Random11 : MonoBehaviour
                 Gi5.SetActive(true);
 
             GachaList.RemoveAt(rand);
+            PlayerPrefs.SetInt("Sham", 1);
+            PlayerPrefs.SetInt("Cat6", 1);
         }
 
         DrawImageRT.sizeDelta = new Vector2(400, 400); //결과 고양이 사이즈 조절
 
         Invoke("CloseDraw", 0.0f);
 
-        var jsonStr = JsonUtility.ToJson(GachaList);
-        PlayerPrefs.SetString("gachaList", jsonStr);
+        
     }
 
     public void CloseDraw() // 뽑기 스크립트가 실행되고 자동으로 실행되게 합니다.

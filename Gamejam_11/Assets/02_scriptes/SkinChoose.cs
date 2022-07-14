@@ -14,6 +14,7 @@ public class SkinChoose : MonoBehaviour
 
     public int SeclectCat = 1;
 
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);

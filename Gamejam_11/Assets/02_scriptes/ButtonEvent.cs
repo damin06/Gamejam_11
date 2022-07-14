@@ -33,14 +33,6 @@ public class ButtonEvent : MonoBehaviour
         startAmi = FindObjectOfType<StartAmi>();
         unLock = FindObjectOfType<UnLock>();
         random11 = FindObjectOfType<Random11>();
-
-        var jsonStr = PlayerPrefs.GetString("gachaList", "");
-        if (string.IsNullOrEmpty(jsonStr) == false)
-        {
-            var list = JsonUtility.FromJson<string[]>(jsonStr);
-            random11.GachaList = new List<string>(list);
-        }
-
     }
 
     public void StartButton()
@@ -64,9 +56,6 @@ public class ButtonEvent : MonoBehaviour
     public void ExitYesButton()
     {
         Debug.Log("게임 종료");
-
-        
-
         Application.Quit();
     }
 
