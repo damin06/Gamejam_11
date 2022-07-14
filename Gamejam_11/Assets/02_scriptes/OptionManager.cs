@@ -69,7 +69,6 @@ public class OptionManager : MonoBehaviour
         }
         else
         {
-            Handheld.Vibrate();
             Vibration_On.SetActive(false);
             Vibration_Off.SetActive(true);
         }

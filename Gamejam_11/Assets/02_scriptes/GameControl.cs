@@ -7,7 +7,7 @@ public class GameControl : MonoBehaviour
 {
     public static GameControl control;
     
-    public bool Language = true;
+    public bool Language = false;
     public bool Sound = true;
     public bool SoundEffect = true;
     public bool Vibration = true;
@@ -15,9 +15,7 @@ public class GameControl : MonoBehaviour
     public AudioSource CatSound;
     public AudioSource ButtonClick;
 
-    public AudioSource SkinAndRandomBGM;
-
-    public int coin = 0;
+    public int coin = 1000;
 
     private void Awake()
     {
@@ -42,13 +40,5 @@ public class GameControl : MonoBehaviour
     {
         if (SoundEffect == true)
         ButtonClick.Play();
-    }
-
-    private void Update()
-    {
-        if (SceneManager.GetActiveScene().name == "Skin" || SceneManager.GetActiveScene().name == "random")
-        {
-            SkinAndRandomBGM.Play();
-        }
     }
 }

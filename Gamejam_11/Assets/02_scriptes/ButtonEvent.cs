@@ -11,6 +11,11 @@ public class ButtonEvent : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void HomeButton(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
     ExitManager exitManager;
     OptionManager optionManager;
     HelpManager helpManager;
@@ -56,6 +61,7 @@ public class ButtonEvent : MonoBehaviour
 
     public void ExitNoButton()
     {
+        GameControl.control.Button();
         exitManager.ExitClick = false;
     }
 
