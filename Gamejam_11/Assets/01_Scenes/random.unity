@@ -804,7 +804,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8076df04ac0565c40a22f4784babc3dc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 14398de8e557a7342aa17eb22c8cf5bb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2130,6 +2130,7 @@ MonoBehaviour:
   ExitButton: {fileID: 895308180}
   skinAll: {fileID: 1792945758}
   skinAllBackGround: {fileID: 363900716}
+  GachaButton: {fileID: 1692096057}
   RandomInt: 1
   GachaList:
   - cat2
@@ -2848,7 +2849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5548520357168695290, guid: 7497ab1ef94ddab439196b9fbd471aba, type: 3}
+  m_Sprite: {fileID: 2937433188218244484, guid: 6dd8599afb389ee4a9377b72210c9a44, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3002,7 +3003,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6536751062753722340, guid: 95c3a6737ba479046817499ce87f9872, type: 3}
+  m_Sprite: {fileID: 2203178447038542642, guid: 37982a91380f1fe46893a306c0e6f355, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

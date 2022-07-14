@@ -10,19 +10,19 @@ public class Random11 : MonoBehaviour
     AudioSource audioSource2;
 
 
-    // È°ï¿½ï¿½È­,ï¿½ï¿½È°ï¿½ï¿½È­ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    // È°¼ºÈ­,ºñÈ°¼ºÈ­ ÇÒ ¿ÀºêÁ§Æ®
     private float currenttime=3;
 
-    public GameObject DrawShop; // ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½
-    public GameObject DrawWindow; // ï¿½Ì´ï¿½ Ã¢
+    public GameObject DrawShop; // »Ì±â »óÁ¡
+    public GameObject DrawWindow; // »Ì´Â Ã¢
 
     
-    // ï¿½Ò·ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
-    public Image DrawImage; // ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
-    public RectTransform DrawImageRT; // ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½Æ® Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    // ºÒ·¯¿Ã ÀÌ¹ÌÁö ¿ÀºêÁ§Æ®
+    public Image DrawImage; // ·£´ý ÀÌ¹ÌÁö¸¦ Ãâ·ÂÇÒ ¿ÀºêÁ§Æ®
+    public RectTransform DrawImageRT; // ·£´ý ÀÌ¹ÌÁö Ãâ·ÂÇÒ ¿ÀºêÁ§Æ® ·ºÆ® Æ®·£½ºÆû
 
 
-    //ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½
+    //¼ýÀÚ ÀÌ¹ÌÁö
     public Sprite Image1;
     public Sprite Image2;
     public Sprite Image3;
@@ -48,10 +48,14 @@ public class Random11 : MonoBehaviour
     public GameObject skinAll;
     public GameObject skinAllBackGround;
 
-    // ï¿½ï¿½ï¿½ï¿½
-    public int RandomInt; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-    private void Start()
+    public GameObject GachaButton;
+
+
+    // º¯¼ö
+    public int RandomInt; // ·£´ý º¯¼ö
+
+    private void Awake()
     {
         audioSource = GameObject.Find("CelebrationSound").GetComponent<AudioSource>();
         audioSource2 = GameObject.Find("LingingSound").GetComponent<AudioSource>();
@@ -63,9 +67,9 @@ public class Random11 : MonoBehaviour
         currenttime += Time.deltaTime;
     }
 
-    public void OneDraw() // 1È¸ ï¿½Ì±ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½
+    public void OneDraw() // 1È¸ »Ì±â ¹öÆ°À» Å¬¸¯ ½Ã
     {
-        DrawImageRT.sizeDelta = new Vector2(400, 400); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        DrawImageRT.sizeDelta = new Vector2(400, 400); //°í¾çÀÌ »çÀÌÁî Á¶Àý
         if (currenttime > 1.3f)
         {
             if (GameControl.control.coin >= 100 && GachaList.Count != 0)
@@ -74,14 +78,14 @@ public class Random11 : MonoBehaviour
 
                 GameControl.control.coin -= 100;
 
-                DrawShop.SetActive(false); //ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­ï¿½Ï°ï¿½,
-                DrawWindow.SetActive(true);// ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½ È°ï¿½ï¿½È­ï¿½Õ´Ï´ï¿½.
+                DrawShop.SetActive(false); //»Ì±â ¼±ÅÃ È­¸éÀ» ºñÈ°¼ºÈ­ÇÏ°í,
+                DrawWindow.SetActive(true);// ·£´ý ÀÌ¹ÌÁö¸¦ Ãâ·ÂÇÑ È­¸éÀ» È°¼ºÈ­ÇÕ´Ï´Ù.
 
                 StartCoroutine("Audio");
 
                 StartCoroutine("RandomOn");
 
-                //Gacha();
+                Button();
             }
 
             if (GachaList.Count == 0)
@@ -90,6 +94,21 @@ public class Random11 : MonoBehaviour
                 skinAllBackGround.SetActive(true);
             }
         }
+    }
+
+    public bool gachabutton = true;
+
+    public void Button()
+    {
+        gachabutton = false;
+        GachaButton.SetActive(false);
+        Invoke("ButtonLate", 3.25f);
+    }
+
+    public void ButtonLate()
+    {
+        gachabutton = true;
+        GachaButton.SetActive(true);
     }
 
     public void skinAllNo()
@@ -137,7 +156,7 @@ public class Random11 : MonoBehaviour
     {
         int rand = Random.Range(0, GachaList.Count);
 
-        if (GachaList[rand] == "cat5") // RandomIntï¿½ï¿½ 1ï¿½Ì¶ï¿½ï¿½
+        if (GachaList[rand] == "cat5") // RandomInt°¡ 1ÀÌ¶ó¸é
         {
                 audioSource.Play();
 
@@ -218,15 +237,18 @@ public class Random11 : MonoBehaviour
             GachaList.RemoveAt(rand);
         }
 
-        DrawImageRT.sizeDelta = new Vector2(400, 400); //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        DrawImageRT.sizeDelta = new Vector2(400, 400); //°á°ú °í¾çÀÌ »çÀÌÁî Á¶Àý
 
         Invoke("CloseDraw", 0.0f);
+
+        var jsonStr = JsonUtility.ToJson(GachaList);
+        PlayerPrefs.SetString("gachaList", jsonStr);
     }
 
-    public void CloseDraw() // ï¿½Ì±ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½Õ´Ï´ï¿½.
+    public void CloseDraw() // »Ì±â ½ºÅ©¸³Æ®°¡ ½ÇÇàµÇ°í ÀÚµ¿À¸·Î ½ÇÇàµÇ°Ô ÇÕ´Ï´Ù.
     {
-        DrawImage.sprite = RanCats; // ï¿½ï¿½ï¿½ï¿½ï¿½ß´ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½Õ´Ï´ï¿½.
-        DrawShop.SetActive(true); // ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½ È°ï¿½ï¿½È­ ï¿½Ï°ï¿½,
-        DrawWindow.SetActive(false); // ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­ï¿½Õ´Ï´ï¿½
+        DrawImage.sprite = RanCats; // Àû¿ëÇß´ø ÀÌ¹ÌÁö¸¦ ÃÊ±âÈ­ÇÕ´Ï´Ù.
+        DrawShop.SetActive(true); // »Ì±â ¼±ÅÃ È­¸éÀ» È°¼ºÈ­ ÇÏ°í,
+        DrawWindow.SetActive(false); // ·£´ý ÀÌ¹ÌÁö È­¸éÀ» ºñÈ°¼ºÈ­ÇÕ´Ï´Ù
     }
 }
