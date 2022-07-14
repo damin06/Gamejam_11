@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Mackerel
+  - F
+  - E
+  - V
+  - E2
+  - R
   layers:
   - Default
   - TransparentFX
@@ -13,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Mackerel
   - 
   - 
   - 

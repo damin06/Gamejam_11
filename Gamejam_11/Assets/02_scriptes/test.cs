@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class test : MonoBehaviour
 {
-   [SerializeField]Text be;
+GameObject objecta;
     void Start()
     {
        
         Input.gyro.enabled =true;
     }
-    void Update()
+    void FixedUpdate()
     {
-        be.text=Input.gyro.rotationRateUnbiased.ToString();
-        transform.Rotate (0,0,Input.gyro.rotationRateUnbiased.z*4.1f);
+    Vector3 minusvec=new Vector3(0,-90,0);
+        transform.Rotate (0,0,Input.gyro.rotationRateUnbiased.z*0.7f);
+    
     }
 }
