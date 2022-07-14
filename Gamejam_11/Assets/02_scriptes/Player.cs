@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
        [SerializeField]private float speed;
      Vector3 vec = Vector3.right;
      float movementscale=24;
-     private float jumptime=2;
+     private float jumptime=1;
      private  float nowtime;
 
      Rigidbody2D rd;
@@ -33,7 +33,9 @@ public class Player : MonoBehaviour
       int a;
     void Start()
     {
-     a=SkinChoose.skin.SeclectCat;
+     
+     //SkinChoose.skin.SeclectCat
+     a=6;
            spriteRen=GetComponent<SpriteRenderer>();
 
      switch(a)
@@ -153,7 +155,7 @@ public class Player : MonoBehaviour
        }
        else if(ispushedRunButton==false && isGround && isDIe==false)
        {
-          jumptime=2f;
+          jumptime=1;
         switch(a)
      {
           case 1 : 
@@ -185,11 +187,15 @@ IEnumerator featCat()
 }
     void FixedUpdate()
 {
-     if(isGround && isjump == false && islevitation== false)
+     if(isjump == false && islevitation== false && isDIe==false)
      {
+          if(isGround)
+          {
+   transform.Rotate (0,0,Input.gyro.rotationRateUnbiased.z*12);
+          }
      Vector3 tilt = Input.acceleration;
      rd.AddForce(tilt*5);
-        transform.Rotate (0,0,Input.gyro.rotationRateUnbiased.z*12);
+     
      }
 
   if(ispushedFeatButton)
@@ -197,7 +203,7 @@ IEnumerator featCat()
          
         CurrenTime+=Time.deltaTime;
    transform.Rotate(new Vector3(0,0,1)* -360 * Time.deltaTime);
-     if(CurrenTime>4.7f && isDIe==false)
+     if(CurrenTime>4.3f && isDIe==false)
      {
           transform.rotation =Quaternion.Euler(0,0,0);
           CurrenTime=4;
@@ -266,7 +272,7 @@ IEnumerator featCat()
 private void OnCollisionEnter2D(Collision2D collision)
 {
 
-jumptime=2;
+jumptime=1;
         if(ispushedFeatButton && collision.gameObject.CompareTag("Ground"))
      {
           isDIe=true;
@@ -320,7 +326,7 @@ isGround=true;
 
 public void JumpButton()
 {
-     if(isGround)
+     if(isGround && isDIe == false)
      {
             nowtime=0;
           transform.Rotate(0,0,0);
@@ -335,7 +341,7 @@ ispushedRunButton = true;
 }
 public void RunButtonPUSH()
 {
-     Debug.Log("우와");
+    
      if(islevitation && CurrenTime>3 && isDIe == false)
      {
           Debug.Log("와아");

@@ -17,7 +17,7 @@ public class GameControl : MonoBehaviour
 
     public int coin = 1000;
 
-    private void Awake()
+    private void Start()
     {
         DontDestroyOnLoad(this.gameObject);
 

@@ -23,13 +23,16 @@ public class spawnMackerel : MonoBehaviour
     }
     private IEnumerator MackerelSpawn()
     {
-        while(true)
+        if(Player.isDIe==false)
         {
-                    float a = Random.Range(spawnMIN,spawnMAX);
-              yield return new WaitForSeconds(a);
-            float posX=Random.Range(llimitMINPOS.position.x, limitMAXPOS.position.x);
-             float posY=Random.Range(llimitMINPOS.position.y,limitMAXPOS.position.y);
-                 Instantiate(Mackerel,new Vector3(posX, posY),Quaternion.identity);
-        }
+            while(true)
+            {
+                        float a = Random.Range(spawnMIN,spawnMAX);
+                yield return new WaitForSeconds(a);
+                float posX=Random.Range(llimitMINPOS.position.x, limitMAXPOS.position.x);
+                float posY=Random.Range(llimitMINPOS.position.y,limitMAXPOS.position.y);
+                    Instantiate(Mackerel,new Vector3(posX, posY),Quaternion.identity);
+            }
+         }
     }
 }
