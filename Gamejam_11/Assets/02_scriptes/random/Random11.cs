@@ -240,6 +240,9 @@ public class Random11 : MonoBehaviour
         DrawImageRT.sizeDelta = new Vector2(400, 400); //결과 고양이 사이즈 조절
 
         Invoke("CloseDraw", 0.0f);
+
+        var jsonStr = JsonUtility.ToJson(GachaList);
+        PlayerPrefs.SetString("gachaList", jsonStr);
     }
 
     public void CloseDraw() // 뽑기 스크립트가 실행되고 자동으로 실행되게 합니다.

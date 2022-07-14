@@ -57,25 +57,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\02_scriptes\random\CoinManager.cs" />
+    <Compile Include="Assets\02_scriptes\backgoudDestroy.cs" />
     <Compile Include="Assets\02_scriptes\MainStart.cs" />
     <Compile Include="Assets\02_scriptes\SkinChoose.cs" />
-    <Compile Include="Assets\02_scriptes\FEVER\F.cs" />
     <Compile Include="Assets\02_scriptes\Player.cs" />
     <Compile Include="Assets\02_scriptes\UnLock.cs" />
     <Compile Include="Assets\02_scriptes\SkinSceneLanguage.cs" />
     <Compile Include="Assets\02_scriptes\map.cs" />
-    <Compile Include="Assets\02_scriptes\FEVER\R.cs" />
     <Compile Include="Assets\02_scriptes\spawnMackerel.cs" />
     <Compile Include="Assets\02_scriptes\ButtonScripts_exit.cs" />
     <Compile Include="Assets\02_scriptes\HelpManager.cs" />
     <Compile Include="Assets\02_scriptes\SkinSceneOptionManager.cs" />
     <Compile Include="Assets\02_scriptes\RandomSceneOptionManager.cs" />
-    <Compile Include="Assets\02_scriptes\FEVER\E.cs" />
     <Compile Include="Assets\02_scriptes\StartAmi.cs" />
     <Compile Include="Assets\02_scriptes\ButtonEvent.cs" />
-    <Compile Include="Assets\02_scriptes\FEVER\E2.cs" />
     <Compile Include="Assets\02_scriptes\SkinHelpManager.cs" />
-    <Compile Include="Assets\02_scriptes\FEVER\V.cs" />
     <Compile Include="Assets\02_scriptes\GameControl.cs" />
     <Compile Include="Assets\02_scriptes\AndroidBackManager.cs" />
     <Compile Include="Assets\02_scriptes\RandomSceneLanguage.cs" />
@@ -85,7 +81,7 @@
     <Compile Include="Assets\02_scriptes\GamePause.cs" />
     <Compile Include="Assets\02_scriptes\OptionManager.cs" />
     <Compile Include="Assets\02_scriptes\stagedata.cs" />
-    <Compile Include="Assets\02_scriptes\FEVER\FEVER.cs" />
+    <Compile Include="Assets\02_scriptes\cloud.cs" />
     <Compile Include="Assets\02_scriptes\CoinCounter.cs" />
     <Compile Include="Assets\02_scriptes\please.cs" />
     <Compile Include="Assets\02_scriptes\random\Random11.cs" />
