@@ -57,21 +57,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\02_scriptes\random\CoinManager.cs" />
+    <Compile Include="Assets\02_scriptes\MainStart.cs" />
+    <Compile Include="Assets\02_scriptes\FEVER\F.cs" />
     <Compile Include="Assets\02_scriptes\Player.cs" />
     <Compile Include="Assets\02_scriptes\SkinSceneLanguage.cs" />
+    <Compile Include="Assets\02_scriptes\map.cs" />
+    <Compile Include="Assets\02_scriptes\FEVER\R.cs" />
+    <Compile Include="Assets\02_scriptes\spawnMackerel.cs" />
     <Compile Include="Assets\02_scriptes\ButtonScripts_exit.cs" />
     <Compile Include="Assets\02_scriptes\HelpManager.cs" />
+    <Compile Include="Assets\02_scriptes\FEVER\E.cs" />
     <Compile Include="Assets\02_scriptes\StartAmi.cs" />
     <Compile Include="Assets\02_scriptes\ButtonEvent.cs" />
+    <Compile Include="Assets\02_scriptes\FEVER\E2.cs" />
     <Compile Include="Assets\02_scriptes\SkinHelpManager.cs" />
+    <Compile Include="Assets\02_scriptes\FEVER\V.cs" />
     <Compile Include="Assets\02_scriptes\GameControl.cs" />
+    <Compile Include="Assets\02_scriptes\Mackerel.cs" />
     <Compile Include="Assets\02_scriptes\test.cs" />
-    <Compile Include="Assets\02_scriptes\test3.cs" />
+    <Compile Include="Assets\02_scriptes\score.cs" />
+    <Compile Include="Assets\02_scriptes\GamePause.cs" />
     <Compile Include="Assets\02_scriptes\OptionManager.cs" />
-    <Compile Include="Assets\02_scriptes\test2.cs" />
+    <Compile Include="Assets\02_scriptes\stagedata.cs" />
+    <Compile Include="Assets\02_scriptes\FEVER\FEVER.cs" />
+    <Compile Include="Assets\02_scriptes\CoinCounter.cs" />
+    <Compile Include="Assets\02_scriptes\please.cs" />
     <Compile Include="Assets\02_scriptes\random\Random11.cs" />
     <Compile Include="Assets\02_scriptes\ExitManager.cs" />
-    <Compile Include="Assets\02_scriptes\MainStart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -81,6 +93,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\README.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
