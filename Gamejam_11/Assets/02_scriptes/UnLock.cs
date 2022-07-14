@@ -126,7 +126,6 @@ public class UnLock : MonoBehaviour
                     SkinChoose.skin.SeclectCat = 6;
                 }
                 break;
-
         }
     }
 }

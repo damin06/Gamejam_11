@@ -20,11 +20,13 @@ public class AndroidBackManager : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "Start")
+        if (Application.platform == RuntimePlatform.Android)
         {
+            if (SceneManager.GetActiveScene().name == "Start")
+            {
                 if (exitManager.ExitClick == true)
                 {
-                    if (Input.GetKeyDown(KeyCode.Escape))
+                    if (Input.GetKey(KeyCode.Escape))
                     {
                         GameControl.control.Button();
                         exitManager.ExitClick = false;
@@ -32,51 +34,49 @@ public class AndroidBackManager : MonoBehaviour
                 }
                 else if (optionManager.click == false && helpManager.HelpClick == false)
                 {
-                    if (Input.GetKeyDown(KeyCode.Escape))
+                    if (Input.GetKey(KeyCode.Escape))
                     {
                         GameControl.control.Button();
                         exitManager.ExitClick = true;
                     }
                 }
-                /*Debug.Log("tlqkf");
-                exitManager.tlqkf();
-                GameControl.control.Button();*/
-            
-        }
 
-        if (SceneManager.GetActiveScene().name == "Skin")
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                GameControl.control.Button();
-                SceneManager.LoadScene("Start");
             }
-        }
 
-        if (SceneManager.GetActiveScene().name == "random")
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (SceneManager.GetActiveScene().name == "Skin")
             {
-                GameControl.control.Button();
-                SceneManager.LoadScene("Skin");
+                if (Input.GetKey(KeyCode.Escape))
+                {
+                    GameControl.control.Button();
+                    SceneManager.LoadScene("Start");
+                }
             }
-        }
 
-        if (optionManager.click == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (SceneManager.GetActiveScene().name == "random")
             {
-                GameControl.control.Button();
-                optionManager.click = false;
+                if (Input.GetKey(KeyCode.Escape))
+                {
+                    GameControl.control.Button();
+                    SceneManager.LoadScene("Skin");
+                }
             }
-        }
 
-        if (helpManager.HelpClick == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (optionManager.click == true)
             {
-                GameControl.control.Button();
-                helpManager.HelpClick = false;
+                if (Input.GetKey(KeyCode.Escape))
+                {
+                    GameControl.control.Button();
+                    optionManager.click = false;
+                }
+            }
+
+            if (helpManager.HelpClick == true)
+            {
+                if (Input.GetKey(KeyCode.Escape))
+                {
+                    GameControl.control.Button();
+                    helpManager.HelpClick = false;
+                }
             }
         }
     }

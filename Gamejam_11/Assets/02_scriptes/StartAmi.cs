@@ -8,7 +8,6 @@ public class StartAmi : MonoBehaviour
     public bool AmiStart;
     public GameObject Title;
     public GameObject CatBackground;
-    public GameObject GameStart;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +33,11 @@ public class StartAmi : MonoBehaviour
 
     public void realStart()
     {
-        GameStart.SetActive(true);
+        Invoke("realrealStart", 0.7f);
+    }
+
+    public void realrealStart()
+    {
+        SceneManager.LoadScene("test");
     }
 }
