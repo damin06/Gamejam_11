@@ -74,6 +74,7 @@
     <Compile Include="Assets\02_scriptes\test2.cs" />
     <Compile Include="Assets\02_scriptes\random\Random11.cs" />
     <Compile Include="Assets\02_scriptes\ExitManager.cs" />
+    <Compile Include="Assets\02_scriptes\RandomSceneLanguage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

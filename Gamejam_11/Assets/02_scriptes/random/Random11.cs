@@ -45,6 +45,9 @@ public class Random11 : MonoBehaviour
 
     public GameObject ExitButton;
 
+    public GameObject skinAll;
+    public GameObject skinAllBackGround;
+
     // 변수
     public int RandomInt; // 랜덤 변수
 
@@ -56,7 +59,7 @@ public class Random11 : MonoBehaviour
 
     void Update()
     {
-        RandomInt = Random.Range(0, 5); // 랜덤 범위를 설정합니다.
+        RandomInt = Random.Range(0, 5);
         currenttime += Time.deltaTime;
     }
 
@@ -65,7 +68,7 @@ public class Random11 : MonoBehaviour
         DrawImageRT.sizeDelta = new Vector2(400, 400); //고양이 사이즈 조절
         if (currenttime > 1.3f)
         {
-            if (GameControl.control.coin >= 100)
+            if (GameControl.control.coin >= 100 && GachaList.Count != 0)
             {
                 ExitButton.SetActive(false);
 
@@ -77,10 +80,22 @@ public class Random11 : MonoBehaviour
                 StartCoroutine("Audio");
 
                 StartCoroutine("RandomOn");
-                
+
+                //Gacha();
             }
 
+            if (GachaList.Count == 0)
+            {
+                skinAll.SetActive(true);
+                skinAllBackGround.SetActive(true);
+            }
         }
+    }
+
+    public void skinAllNo()
+    {
+        skinAll.SetActive(false);
+        skinAllBackGround.SetActive(false);
     }
 
     IEnumerator Audio()
@@ -100,94 +115,109 @@ public class Random11 : MonoBehaviour
         {
             DrawImage.sprite = Image1;
             yield return new WaitForSeconds(0.1f);
-           
+
             DrawImage.sprite = Image2;
             yield return new WaitForSeconds(0.1f);
-            
+
             DrawImage.sprite = Image3;
             yield return new WaitForSeconds(0.1f);
-            
+
             DrawImage.sprite = Image4;
             yield return new WaitForSeconds(0.1f);
-            
+
             DrawImage.sprite = Image5;
         }
 
-        if (RandomInt == 1) // RandomInt가 1이라면
+        Gacha();
+    }
+
+    public List<string> GachaList = new List<string>() { "cat2", "cat3", "cat4", "cat5", "cat6" };
+
+    public void Gacha()
+    {
+        int rand = Random.Range(0, GachaList.Count);
+
+        if (GachaList[rand] == "cat5") // RandomInt가 1이라면
         {
-            audioSource.Play();
+                audioSource.Play();
 
-            DrawImage.sprite = Image1;
-            Result_PopUp.SetActive(true);
-            Result_Btn.SetActive(true);
-            Result_Text.SetActive(true);
-            ExitButton.SetActive(true);
+                DrawImage.sprite = Image1;
+                Result_PopUp.SetActive(true);
+                Result_Btn.SetActive(true);
+                Result_Text.SetActive(true);
+                ExitButton.SetActive(true);
 
-            SkinChoose.skin.Cat5 = true;
+                SkinChoose.skin.Cat5 = true;
 
-            Gi1.SetActive(true);
+                Gi1.SetActive(true);
 
+            GachaList.RemoveAt(rand);
         }
-        else if (RandomInt == 2)
+        else if (GachaList[rand] == "cat4")
         {
-            audioSource.Play();
+                audioSource.Play();
 
-            DrawImage.sprite = Image2;
-            Result_PopUp.SetActive(true);
-            Result_Btn.SetActive(true);
-            Result_Text.SetActive(true);
-            ExitButton.SetActive(true);
+                DrawImage.sprite = Image2;
+                Result_PopUp.SetActive(true);
+                Result_Btn.SetActive(true);
+                Result_Text.SetActive(true);
+                ExitButton.SetActive(true);
 
-            SkinChoose.skin.Cat4 = true;
+                SkinChoose.skin.Cat4 = true;
 
-            Gi2.SetActive(true);
+                Gi2.SetActive(true);
 
+            GachaList.RemoveAt(rand);
         }
-        else if (RandomInt == 3)
+        else if (GachaList[rand] == "cat3")
         {
-            audioSource.Play();
+                audioSource.Play();
 
-            DrawImage.sprite = Image3;
-            Result_PopUp.SetActive(true);
-            Result_Btn.SetActive(true);
-            Result_Text.SetActive(true);
-            ExitButton.SetActive(true);
+                DrawImage.sprite = Image3;
+                Result_PopUp.SetActive(true);
+                Result_Btn.SetActive(true);
+                Result_Text.SetActive(true);
+                ExitButton.SetActive(true);
 
-            SkinChoose.skin.Cat3 = true;
+                SkinChoose.skin.Cat3 = true;
 
-            Gi3.SetActive(true);
+                Gi3.SetActive(true);
 
+            GachaList.RemoveAt(rand);
         }
-        else if (RandomInt == 4)
+        else if (GachaList[rand] == "cat2")
         {
-            audioSource.Play();
+                audioSource.Play();
 
-            DrawImage.sprite = Image4;
-            Result_PopUp.SetActive(true);
-            Result_Btn.SetActive(true);
-            Result_Text.SetActive(true);
-            ExitButton.SetActive(true);
+                DrawImage.sprite = Image4;
+                Result_PopUp.SetActive(true);
+                Result_Btn.SetActive(true);
+                Result_Text.SetActive(true);
+                ExitButton.SetActive(true);
 
-            SkinChoose.skin.Cat2 = true;
+                SkinChoose.skin.Cat2 = true;
 
-            Gi4.SetActive(true);
+                Gi4.SetActive(true);
 
+            GachaList.RemoveAt(rand);
         }
         else
         {
-            audioSource.Play();
+                audioSource.Play();
 
-            DrawImage.sprite = Image5;
-            Result_PopUp.SetActive(true);
-            Result_Btn.SetActive(true);
-            Result_Text.SetActive(true);
-            ExitButton.SetActive(true);
+                DrawImage.sprite = Image5;
+                Result_PopUp.SetActive(true);
+                Result_Btn.SetActive(true);
+                Result_Text.SetActive(true);
+                ExitButton.SetActive(true);
 
-            SkinChoose.skin.Cat6 = true;
+                SkinChoose.skin.Cat6 = true;
 
-            Gi5.SetActive(true);
+                Gi5.SetActive(true);
 
+            GachaList.RemoveAt(rand);
         }
+
         DrawImageRT.sizeDelta = new Vector2(400, 400); //결과 고양이 사이즈 조절
 
         Invoke("CloseDraw", 0.0f);

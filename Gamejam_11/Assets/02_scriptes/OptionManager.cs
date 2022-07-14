@@ -10,6 +10,7 @@ public class OptionManager : MonoBehaviour
     public GameObject OptionTool;
 
     public AudioSource startBGM;
+
     public GameObject Sound_On;
     public GameObject Sound_Off;
     public GameObject SoundEffect_On;

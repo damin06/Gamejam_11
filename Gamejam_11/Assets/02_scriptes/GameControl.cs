@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
@@ -14,7 +15,9 @@ public class GameControl : MonoBehaviour
     public AudioSource CatSound;
     public AudioSource ButtonClick;
 
-    public int coin = 100;
+    public AudioSource SkinAndRandomBGM;
+
+    public int coin = 0;
 
     private void Awake()
     {
@@ -39,5 +42,13 @@ public class GameControl : MonoBehaviour
     {
         if (SoundEffect == true)
         ButtonClick.Play();
+    }
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "Skin" || SceneManager.GetActiveScene().name == "random")
+        {
+            SkinAndRandomBGM.Play();
+        }
     }
 }

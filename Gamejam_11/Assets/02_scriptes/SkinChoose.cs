@@ -16,7 +16,7 @@ public class SkinChoose : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(this.gameObject);
 
         if (skin == null)
         {
@@ -24,7 +24,7 @@ public class SkinChoose : MonoBehaviour
         }
         else if (skin != this)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }

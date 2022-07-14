@@ -17,6 +17,7 @@ public class ButtonEvent : MonoBehaviour
     SkinHelpManager skinHelpManager;
     StartAmi startAmi;
     UnLock unLock;
+    Random11 random11;
 
     private void Start()
     {
@@ -26,6 +27,7 @@ public class ButtonEvent : MonoBehaviour
         skinHelpManager = FindObjectOfType<SkinHelpManager>();
         startAmi = FindObjectOfType<StartAmi>();
         unLock = FindObjectOfType<UnLock>();
+        random11 = FindObjectOfType<Random11>();
     }
 
     public void StartButton()
@@ -130,5 +132,10 @@ public class ButtonEvent : MonoBehaviour
     {
         catNumber = catNum;
         unLock.catSeclect(catNumber);
+    }
+
+    public void skinAllNoButton()
+    {
+        random11.skinAllNo();
     }
 }
