@@ -55,7 +55,7 @@ public class ButtonEvent : MonoBehaviour
 
     public void ExitYesButton()
     {
-        Debug.Log("°ÔÀÓ Á¾·á");
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
         Application.Quit();
     }
 

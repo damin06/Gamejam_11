@@ -92,14 +92,14 @@ public class OptionManager : MonoBehaviour
         {
             Title_Korea.SetActive(true);
             Title_English.SetActive(false);
-            Exit.text = "Á¤¸» ³ª°¡½Ç°Ç°¡¿ä?";
-            ExitNo.text = "¾Æ´Ï¿ä";
-            ExitYes.text = "³×";
-            OptionText.text = "¼³Á¤";
+            Exit.text = "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç°Ç°ï¿½ï¿½ï¿½?";
+            ExitNo.text = "ï¿½Æ´Ï¿ï¿½";
+            ExitYes.text = "ï¿½ï¿½";
+            OptionText.text = "ï¿½ï¿½ï¿½ï¿½";
             Option_Language.text = "English";
-            Help.text = "µµ¿ò";
-            HelpText1.text = "È­¸éÀ» ±â¿ï¿© ¸ÊÀ» ±â¿ïÀÏ ¼ö ÀÖ½À´Ï´Ù.";
-            HelpText2.text = "°í¾çÀÌ´Â ±¸¸£°Å³ª Á¡ÇÁÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+            Help.text = "ï¿½ï¿½ï¿½ï¿½";
+            HelpText1.text = "È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿© ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.";
+            HelpText2.text = "ï¿½ï¿½ï¿½ï¿½ï¿½Ì´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.";
         }
         else
         {
@@ -109,7 +109,7 @@ public class OptionManager : MonoBehaviour
             ExitNo.text = "No";
             ExitYes.text = "Yes";
             OptionText.text = "Option";
-            Option_Language.text = "ÇÑ±¹¾î";
+            Option_Language.text = "ï¿½Ñ±ï¿½ï¿½ï¿½";
             Help.text = "Help";
             HelpText1.text = "You can tile the screen to tilt the map.";
             HelpText2.text = "Cat can roll and jump";

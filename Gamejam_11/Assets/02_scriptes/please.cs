@@ -7,13 +7,16 @@ public class please : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(gameObject,17);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("아암암ㄴ어ㅏㅁㄴ엄나암ㅇ");
+        if(Player.isDIe)
+        {
+            Destroy(gameObject);
+        }
     }
      private void OnTriggerEnter2D(Collider2D other) 
      {  

@@ -5,10 +5,7 @@ using UnityEngine;
 public class GamePause : MonoBehaviour
 {
   public static bool  isPuause=false;
-    void Start()
-    {
-        
-    }
+   
 
     // Update is called once per frame
     void Update()

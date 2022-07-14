@@ -8,14 +8,11 @@ public class CoinCounter : MonoBehaviour
     [SerializeField]Text COinTXT;
  public static  int Coin;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
     {
-        COinTXT.text="Coin: "+Coin;
+        COinTXT.text=Coin.ToString();
     }
 }
