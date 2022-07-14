@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class map : MonoBehaviour
 {
+    [SerializeField]GameObject cloud;
     int randommap;
     public static float Xpos=1428;
     [SerializeField]GameObject a;
@@ -49,16 +50,16 @@ public class map : MonoBehaviour
             case 0 :
            gameObject.transform.position=new Vector3(Xpos-116.4f,-135.03f,0);
                GameObject clonA= Instantiate(mapImageA,vec1,Quaternion.identity);
-                Xpos+=116.4f;
+                Xpos+=114;
                // clonA.transform.parent= parents;
-                limitMinMapPos+=116.4f;
+                limitMinMapPos+=114;
                 break;
            case 1 : 
                    gameObject.transform.position=new Vector3(Xpos-124.4f,-135.03f,0);
                 GameObject clonC= Instantiate(mapImageC,vec1,Quaternion.identity);
-                Xpos+=123;
+                Xpos+=120;
                 //clonC.transform.parent= parents;
-                limitMinMapPos+=123;
+                limitMinMapPos+=120;
                 break;
             case 2 :
                     gameObject.transform.position=new Vector3(Xpos-128,-135.03f,0);
@@ -107,10 +108,10 @@ public class map : MonoBehaviour
     }
           private void OnTriggerEnter2D(Collider2D other) 
      {  
-        
-    Debug.Log("아 제발");
+  
          if(other.CompareTag("Player"))
          {
+            cloud.transform.position=new Vector3(Xpos-260,-135.03f,0);
             BackGroundSpawn();
             MapSpawn();
             BackGroundSpawn();

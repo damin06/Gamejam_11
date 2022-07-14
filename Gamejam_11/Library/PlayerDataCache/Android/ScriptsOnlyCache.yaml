@@ -1,27 +1,27 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AndroidBackManager
     - ButtonEvent
     - ButtonScripts_exit
     - CoinCounter
     - CoinManager
-    - E
-    - E2
     - ExitManager
-    - F
-    - FEVER
     - GameControl
     - GamePause
     - HelpManager
     - MainStart
     - OptionManager
     - Player
-    - R
     - Random11
+    - RandomSceneLanguage
+    - SkinChoose
     - SkinHelpManager
     - SkinSceneLanguage
     - StartAmi
-    - V
+    - UnLock
+    - backgoudDestroy
+    - cloud
     - map
     - please
     - score
@@ -31,6 +31,7 @@ ScriptsOnlyBuild:
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineComposer
+    - Cinemachine.CinemachineConfiner
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineTransposer
     - Cinemachine.CinemachineVirtualCamera
@@ -93,7 +94,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2144}
+      Script: {instanceID: 2104}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -119,36 +120,42 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1618}
+      Script: {instanceID: 1576}
     - Class: 114
-      Script: {instanceID: 2446}
+      Script: {instanceID: 2406}
     - Class: 114
-      Script: {instanceID: 2914}
+      Script: {instanceID: 2758}
     - Class: 114
-      Script: {instanceID: 2980}
+      Script: {instanceID: 2876}
     - Class: 114
-      Script: {instanceID: 3116}
+      Script: {instanceID: 2942}
     - Class: 114
-      Script: {instanceID: 3390}
+      Script: {instanceID: 3078}
     - Class: 114
-      Script: {instanceID: 3670}
+      Script: {instanceID: 3350}
     - Class: 114
-      Script: {instanceID: 3682}
+      Script: {instanceID: 3630}
     - Class: 114
-      Script: {instanceID: 3812}
+      Script: {instanceID: 3642}
     - Class: 114
-      Script: {instanceID: 3910}
+      Script: {instanceID: 3764}
     - Class: 114
-      Script: {instanceID: 4156}
+      Script: {instanceID: 3868}
     - Class: 114
-      Script: {instanceID: 4196}
+      Script: {instanceID: 4114}
     - Class: 114
-      Script: {instanceID: 4982}
+      Script: {instanceID: 4152}
     - Class: 114
-      Script: {instanceID: 5204}
+      Script: {instanceID: 4940}
+    - Class: 114
+      Script: {instanceID: 5162}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -189,41 +196,43 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1618}
+      Script: {instanceID: 1576}
     - Class: 114
-      Script: {instanceID: 1984}
+      Script: {instanceID: 1944}
     - Class: 114
-      Script: {instanceID: 2436}
+      Script: {instanceID: 2396}
     - Class: 114
-      Script: {instanceID: 2446}
+      Script: {instanceID: 2406}
     - Class: 114
-      Script: {instanceID: 2914}
+      Script: {instanceID: 2876}
     - Class: 114
-      Script: {instanceID: 3116}
+      Script: {instanceID: 3078}
     - Class: 114
-      Script: {instanceID: 3390}
+      Script: {instanceID: 3350}
     - Class: 114
-      Script: {instanceID: 3626}
+      Script: {instanceID: 3586}
     - Class: 114
-      Script: {instanceID: 3670}
+      Script: {instanceID: 3630}
     - Class: 114
-      Script: {instanceID: 3812}
+      Script: {instanceID: 3764}
     - Class: 114
-      Script: {instanceID: 3898}
+      Script: {instanceID: 3856}
     - Class: 114
-      Script: {instanceID: 3910}
+      Script: {instanceID: 3868}
     - Class: 114
-      Script: {instanceID: 4156}
+      Script: {instanceID: 4114}
     - Class: 114
-      Script: {instanceID: 4232}
+      Script: {instanceID: 4186}
     - Class: 114
-      Script: {instanceID: 5276}
+      Script: {instanceID: 4318}
     - Class: 114
-      Script: {instanceID: 5368}
+      Script: {instanceID: 5234}
     - Class: 114
-      Script: {instanceID: 5812}
+      Script: {instanceID: 5326}
     - Class: 114
-      Script: {instanceID: 6468}
+      Script: {instanceID: 5770}
+    - Class: 114
+      Script: {instanceID: 6426}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -264,27 +273,33 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1618}
+      Script: {instanceID: 1576}
     - Class: 114
-      Script: {instanceID: 1694}
+      Script: {instanceID: 1652}
     - Class: 114
-      Script: {instanceID: 2446}
+      Script: {instanceID: 2170}
     - Class: 114
-      Script: {instanceID: 2914}
+      Script: {instanceID: 2406}
     - Class: 114
-      Script: {instanceID: 3116}
+      Script: {instanceID: 2876}
     - Class: 114
-      Script: {instanceID: 3390}
+      Script: {instanceID: 3078}
     - Class: 114
-      Script: {instanceID: 3432}
+      Script: {instanceID: 3350}
     - Class: 114
-      Script: {instanceID: 3670}
+      Script: {instanceID: 3392}
     - Class: 114
-      Script: {instanceID: 3812}
+      Script: {instanceID: 3630}
     - Class: 114
-      Script: {instanceID: 3910}
+      Script: {instanceID: 3764}
     - Class: 114
-      Script: {instanceID: 6316}
+      Script: {instanceID: 3868}
+    - Class: 114
+      Script: {instanceID: 4114}
+    - Class: 114
+      Script: {instanceID: 4340}
+    - Class: 114
+      Script: {instanceID: 6274}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -333,63 +348,59 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1618}
+      Script: {instanceID: 1576}
     - Class: 114
-      Script: {instanceID: 1852}
+      Script: {instanceID: 1810}
     - Class: 114
-      Script: {instanceID: 2250}
+      Script: {instanceID: 1866}
     - Class: 114
-      Script: {instanceID: 2446}
+      Script: {instanceID: 2406}
     - Class: 114
-      Script: {instanceID: 2680}
+      Script: {instanceID: 2640}
     - Class: 114
-      Script: {instanceID: 2860}
+      Script: {instanceID: 2822}
     - Class: 114
-      Script: {instanceID: 2914}
+      Script: {instanceID: 2876}
     - Class: 114
-      Script: {instanceID: 3008}
+      Script: {instanceID: 2894}
     - Class: 114
-      Script: {instanceID: 3038}
+      Script: {instanceID: 2970}
     - Class: 114
-      Script: {instanceID: 3116}
+      Script: {instanceID: 3000}
     - Class: 114
-      Script: {instanceID: 3222}
+      Script: {instanceID: 3078}
     - Class: 114
-      Script: {instanceID: 3294}
+      Script: {instanceID: 3184}
     - Class: 114
-      Script: {instanceID: 3386}
+      Script: {instanceID: 3346}
     - Class: 114
-      Script: {instanceID: 3390}
+      Script: {instanceID: 3350}
     - Class: 114
-      Script: {instanceID: 3670}
+      Script: {instanceID: 3630}
     - Class: 114
-      Script: {instanceID: 3804}
+      Script: {instanceID: 3764}
     - Class: 114
-      Script: {instanceID: 3812}
+      Script: {instanceID: 4502}
     - Class: 114
-      Script: {instanceID: 4172}
+      Script: {instanceID: 4572}
     - Class: 114
-      Script: {instanceID: 4202}
+      Script: {instanceID: 4616}
     - Class: 114
-      Script: {instanceID: 4544}
+      Script: {instanceID: 4710}
     - Class: 114
-      Script: {instanceID: 4614}
+      Script: {instanceID: 4914}
     - Class: 114
-      Script: {instanceID: 4658}
+      Script: {instanceID: 5284}
     - Class: 114
-      Script: {instanceID: 4752}
+      Script: {instanceID: 5402}
     - Class: 114
-      Script: {instanceID: 4956}
+      Script: {instanceID: 5930}
     - Class: 114
-      Script: {instanceID: 5326}
+      Script: {instanceID: 6016}
     - Class: 114
-      Script: {instanceID: 5528}
+      Script: {instanceID: 6286}
     - Class: 114
-      Script: {instanceID: 5972}
-    - Class: 114
-      Script: {instanceID: 6058}
-    - Class: 114
-      Script: {instanceID: 6328}
+      Script: {instanceID: 18072}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -519,6 +530,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: backgoudDestroy
+  - hash:
+      serializedVersion: 2
       Hash: 300fd99066f8c288e85f5e81ce65fe34
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -543,16 +560,16 @@ ScriptsOnlyBuild:
     className: MainStart
   - hash:
       serializedVersion: 2
+      Hash: 83e6be5b98649ee5f9f0f4a14aed8bdb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SkinChoose
+  - hash:
+      serializedVersion: 2
       Hash: 6225eb0973ab0af667bc5f9d1b1b18de
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineCollider
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: F
   - hash:
       serializedVersion: 2
       Hash: 15882a52798c275361cd0a3ada984ec5
@@ -603,7 +620,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: d8dd28e722521a0d846e0ac8defb8e49
+      Hash: dc2fc0194598513beefb971860428dd2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -625,6 +642,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: IKManager2D
+  - hash:
+      serializedVersion: 2
+      Hash: 75b5133506e31c4808e2c49b147ce232
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UnLock
   - hash:
       serializedVersion: 2
       Hash: 62824bb9557c7e987502f2fbd2a26819
@@ -651,7 +674,7 @@ ScriptsOnlyBuild:
     className: CinemachineSameAsFollowTarget
   - hash:
       serializedVersion: 2
-      Hash: 62061065340e46730e7c43e1af4839fd
+      Hash: 43b4a5ac2f8c529ef0122a86ca7757cc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SkinSceneLanguage
@@ -663,7 +686,7 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
-      Hash: 9aaace2008354f957541facf9ad15c67
+      Hash: cdd07b141c0a180a769bb9ca01de0494
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: map
@@ -721,12 +744,6 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineHardLookAt
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: R
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -861,12 +878,6 @@ ScriptsOnlyBuild:
     className: CinemachineImpulseListener
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: E
-  - hash:
-      serializedVersion: 2
       Hash: 69415240821be7986b27e72bf9609a30
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -885,7 +896,7 @@ ScriptsOnlyBuild:
     className: StartAmi
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 063e0ca208a70fd363400cb7a415d066
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonEvent
@@ -916,12 +927,6 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: E2
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachinePixelPerfect
@@ -933,19 +938,13 @@ ScriptsOnlyBuild:
     className: SkinHelpManager
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: V
-  - hash:
-      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: f3b15e06bc72836b1e448adae18b9171
+      Hash: a07f74ecce0df4857cbdcbb200dfeb19
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameControl
@@ -973,6 +972,18 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineFixedSignal
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AndroidBackManager
+  - hash:
+      serializedVersion: 2
+      Hash: a4cefcf9104215ba5cf1b70cd4cf5a31
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RandomSceneLanguage
   - hash:
       serializedVersion: 2
       Hash: 611bc970ee9dc090779a3fac6a18fac6
@@ -1227,16 +1238,16 @@ ScriptsOnlyBuild:
     className: SpriteSkinEntity
   - hash:
       serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: cloud
+  - hash:
+      serializedVersion: 2
       Hash: dbfb4270852b0008a423a7418d9de4cf
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineHardLockToTarget
-  - hash:
-      serializedVersion: 2
-      Hash: b4c9a7ad5965241e967cfdcf1960350e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FEVER
   - hash:
       serializedVersion: 2
       Hash: af56f77a30c1a2da1680c736a6f5c6e8
@@ -1335,7 +1346,7 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 517b0ed02a2d591d31a3ad2fc7078927
+      Hash: d9eab2d3bdee9aafa25530d9b11c0257
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Random11
@@ -1388,4 +1399,4 @@ ScriptsOnlyBuild:
   - Assets/01_Scenes/Skin.unity
   - Assets/01_Scenes/random.unity
   - Assets/01_Scenes/Main_Start.unity
-  playerPath: "C:/Users/user/Desktop/\uACE0\uC591\uC774 \uAD6C\uB974\uB2E4.apk"
+  playerPath: C:/Users/user/Desktop/top_seceret/test49.apk

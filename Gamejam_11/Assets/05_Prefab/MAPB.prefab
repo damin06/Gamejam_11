@@ -118,9 +118,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000047683716, y: 0}
+  m_Offset: {x: -0.0000004642718, y: -0.0033290626}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.49669793
 --- !u!1 &2110214004429721591
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 1234181489}
   - component: {fileID: 1234181488}
   - component: {fileID: 6794246282259106364}
+  - component: {fileID: 2197013415253231461}
   m_Layer: 6
   m_Name: MAPB
   m_TagString: Ground
@@ -228,6 +229,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 264bf891d4acda043b4b04cd16330ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2197013415253231461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110214004429721591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c00cfb5af46564d830912e2020f0b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2588544934844323043
@@ -430,9 +443,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000047683716, y: 0}
+  m_Offset: {x: -0.0000004509011, y: -0.0030237967}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.49697626
 --- !u!1 &4253659170507275089
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,9 +931,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000047683716, y: 0}
+  m_Offset: {x: 0, y: -0.0028679746}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4817468
 --- !u!1 &8719842929240662941
 GameObject:
   m_ObjectHideFlags: 0
