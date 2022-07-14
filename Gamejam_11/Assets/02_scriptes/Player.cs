@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     {
      
      //SkinChoose.skin.SeclectCat
-     a=6;
+     a=PlayerPrefs.GetInt("skin");
            spriteRen=GetComponent<SpriteRenderer>();
 
      switch(a)

@@ -15,10 +15,11 @@ public class GameControl : MonoBehaviour
     public AudioSource CatSound;
     public AudioSource ButtonClick;
 
-    public int coin = 1000;
+    public int coin ;
 
     private void Start()
     {
+        coin = PlayerPrefs.GetInt("money");
         DontDestroyOnLoad(this.gameObject);
 
         if (control == null)

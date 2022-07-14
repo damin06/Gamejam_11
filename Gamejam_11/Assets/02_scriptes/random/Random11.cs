@@ -70,7 +70,7 @@ public class Random11 : MonoBehaviour
     public void OneDraw() // 1회 뽑기 버튼을 클릭 시
     {
         DrawImageRT.sizeDelta = new Vector2(400, 400); //고양이 사이즈 조절
-        if (currenttime > 1.3f)
+        if (currenttime > 1.6f)
         {
             if (GameControl.control.coin >= 100)
             {
@@ -88,7 +88,13 @@ public class Random11 : MonoBehaviour
                 Button();
             }
 
-            if (SkinChoose.skin.Cat2 == true && SkinChoose.skin.Cat3 == true && SkinChoose.skin.Cat4 == true && SkinChoose.skin.Cat5 == true && SkinChoose.skin.Cat6 == true)
+            //if (SkinChoose.skin.Cat2 == true && SkinChoose.skin.Cat3 == true && SkinChoose.skin.Cat4 == true && SkinChoose.skin.Cat5 == true && SkinChoose.skin.Cat6 == true)
+            //{
+            //    skinAll.SetActive(true);
+            //    skinAllBackGround.SetActive(true);
+            //}
+
+            if (SkinManager.White == 1 && SkinManager.Black == 1 && SkinManager.Gray == 1 && SkinManager.Sham == 1 && SkinManager.Threecol == 1) 
             {
                 skinAll.SetActive(true);
                 skinAllBackGround.SetActive(true);
@@ -150,11 +156,7 @@ public class Random11 : MonoBehaviour
         Gacha();
     }
 
-    public int cat22 = PlayerPrefs.GetInt("Cat2");
-    public int cat33 = PlayerPrefs.GetInt("Cat3");
-    public int cat44 = PlayerPrefs.GetInt("Cat4");
-    public int cat55 = PlayerPrefs.GetInt("Cat5");
-    public int cat66 = PlayerPrefs.GetInt("Cat6");
+  
 
     public List<string> GachaList = new List<string>() { "cat2", "cat3", "cat4", "cat5", "cat6" };
 
@@ -178,7 +180,7 @@ public class Random11 : MonoBehaviour
 
             GachaList.RemoveAt(rand);
 
-                PlayerPrefs.SetInt("Cat2", 1);
+               
         }
         else if (GachaList[rand] == "cat4")
         {
@@ -196,7 +198,7 @@ public class Random11 : MonoBehaviour
 
             GachaList.RemoveAt(rand);
 
-            PlayerPrefs.SetInt("Cat3", 1);
+            
         }
         else if (GachaList[rand] == "cat3")
         {
@@ -214,7 +216,7 @@ public class Random11 : MonoBehaviour
 
             GachaList.RemoveAt(rand);
 
-            PlayerPrefs.SetInt("Cat4", 1);
+            
         }
         else if (GachaList[rand] == "cat2")
         {
@@ -232,7 +234,7 @@ public class Random11 : MonoBehaviour
 
             GachaList.RemoveAt(rand);
 
-            PlayerPrefs.SetInt("Cat5", 1);
+            
         }
         else
         {
@@ -250,7 +252,7 @@ public class Random11 : MonoBehaviour
 
             GachaList.RemoveAt(rand);
             PlayerPrefs.SetInt("Sham", 1);
-            PlayerPrefs.SetInt("Cat6", 1);
+            
         }
 
         DrawImageRT.sizeDelta = new Vector2(400, 400); //결과 고양이 사이즈 조절

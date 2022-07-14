@@ -71,23 +71,24 @@
     <Compile Include="Assets\02_scriptes\RandomSceneOptionManager.cs" />
     <Compile Include="Assets\02_scriptes\StartAmi.cs" />
     <Compile Include="Assets\02_scriptes\ButtonEvent.cs" />
+    <Compile Include="Assets\02_scriptes\isfall.cs" />
     <Compile Include="Assets\02_scriptes\SkinHelpManager.cs" />
     <Compile Include="Assets\02_scriptes\GameControl.cs" />
     <Compile Include="Assets\02_scriptes\AndroidBackManager.cs" />
     <Compile Include="Assets\02_scriptes\RandomSceneLanguage.cs" />
+    <Compile Include="Assets\02_scriptes\GameOver.cs" />
     <Compile Include="Assets\02_scriptes\Mackerel.cs" />
     <Compile Include="Assets\02_scriptes\test.cs" />
     <Compile Include="Assets\02_scriptes\score.cs" />
     <Compile Include="Assets\02_scriptes\GamePause.cs" />
     <Compile Include="Assets\02_scriptes\OptionManager.cs" />
+    <Compile Include="Assets\02_scriptes\SkinJson.cs" />
     <Compile Include="Assets\02_scriptes\stagedata.cs" />
     <Compile Include="Assets\02_scriptes\cloud.cs" />
-    <Compile Include="Assets\02_scriptes\CoinCounter.cs" />
     <Compile Include="Assets\02_scriptes\please.cs" />
     <Compile Include="Assets\02_scriptes\random\Random11.cs" />
-    <Compile Include="Assets\02_scriptes\ExitManager.cs" />
-    <Compile Include="Assets\02_scriptes\SkinJson.cs" />
     <Compile Include="Assets\02_scriptes\SkinManager.cs" />
+    <Compile Include="Assets\02_scriptes\ExitManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
