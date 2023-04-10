@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 96053755}
   - component: {fileID: 96053756}
   m_Layer: 5
-  m_Name: ScoreImage
+  m_Name: GameOver_ScoreImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 209566636}
   - component: {fileID: 209566638}
   m_Layer: 5
-  m_Name: OK
+  m_Name: GameOver_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 239020142}
   - component: {fileID: 239020143}
   m_Layer: 5
-  m_Name: MoneyImage
+  m_Name: GameOver_MoneyImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1179,7 +1179,7 @@ GameObject:
   - component: {fileID: 542958462}
   - component: {fileID: 542958463}
   m_Layer: 5
-  m_Name: WHITE
+  m_Name: GameOver_Pannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1251,7 +1251,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 548588677}
-  - component: {fileID: 548588678}
   - component: {fileID: 548588680}
   m_Layer: 0
   m_Name: Gamemanager
@@ -1274,19 +1273,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &548588678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548588675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7870762a4615c5145a0e0cdd84bafe2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  COinTXT: {fileID: 0}
 --- !u!114 &548588680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,14 +1285,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b1703d587f6d9d41974a7693cb7923e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playe: {fileID: 34036089}
+  player: {fileID: 0}
   playerpos: {fileID: 129649050}
-  TT: {fileID: 574489752}
-  moneimage: {fileID: 239020143}
-  scoreimage: {fileID: 96053756}
-  black: {fileID: 2117598566}
-  white: {fileID: 542958463}
-  ok: {fileID: 209566638}
+  GameOver_Icon: {fileID: 0}
+  GameOver_MoneyImage: {fileID: 0}
+  GameOver_ScoreImage: {fileID: 0}
+  GameOver_Background: {fileID: 0}
+  GameOver_Pannel: {fileID: 0}
+  GameOver_UI: {fileID: 0}
   scoreTXT: {fileID: 1177596263}
   moneyTXT: {fileID: 2093750184}
 --- !u!1 &574489750
@@ -1321,7 +1307,7 @@ GameObject:
   - component: {fileID: 574489753}
   - component: {fileID: 574489752}
   m_Layer: 5
-  m_Name: catTT
+  m_Name: GameOver_Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2286,7 +2272,7 @@ GameObject:
   - component: {fileID: 1177596262}
   - component: {fileID: 1177596263}
   m_Layer: 5
-  m_Name: EndScore
+  m_Name: GameOver_EndScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3155,7 +3141,7 @@ GameObject:
   - component: {fileID: 2036840326}
   - component: {fileID: 2036840325}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ScoreImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3230,7 +3216,7 @@ GameObject:
   - component: {fileID: 2093750185}
   - component: {fileID: 2093750184}
   m_Layer: 5
-  m_Name: EndMoney
+  m_Name: GameOver_EndMoney
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3309,7 +3295,7 @@ GameObject:
   - component: {fileID: 2117598565}
   - component: {fileID: 2117598566}
   m_Layer: 5
-  m_Name: BLACK
+  m_Name: GameOver_Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

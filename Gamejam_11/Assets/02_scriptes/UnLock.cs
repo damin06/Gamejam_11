@@ -17,7 +17,7 @@ public class UnLock : MonoBehaviour
     {
         random11 = FindObjectOfType<Random11>();
 
-        if (random11.cat22 == 1)
+        /*if (random11. == 1)
         {
             cat222 = true;
             SkinChoose.skin.Cat2 = true;
@@ -41,7 +41,7 @@ public class UnLock : MonoBehaviour
         {
             cat666 = true;
             SkinChoose.skin.Cat6 = true;
-        }
+        }*/
     }
 
     public Image cat2;

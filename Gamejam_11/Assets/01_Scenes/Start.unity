@@ -3676,8 +3676,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1109883006}
         m_TargetAssemblyTypeName: ButtonEvent, Assembly-CSharp
-        m_MethodName: StartButton
-        m_Mode: 1
+        m_MethodName: SceneLoader
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

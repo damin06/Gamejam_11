@@ -21,12 +21,10 @@ public class please : MonoBehaviour
      private void OnTriggerEnter2D(Collider2D other) 
      {  
         
-    Debug.Log("와 샌즈!");
          if(other.CompareTag("Player"))
          {
-             CoinCounter.Coin++;
+            /* CoinCounter.Coin++;*/
               Destroy(gameObject);
-              Debug.Log("와 샌즈!");
            
           
         }

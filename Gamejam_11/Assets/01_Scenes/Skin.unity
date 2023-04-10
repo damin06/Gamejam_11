@@ -1195,7 +1195,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 302525390}
         m_TargetAssemblyTypeName: ButtonEvent, Assembly-CSharp
-        m_MethodName: HomeButton
+        m_MethodName: SceneLoader
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4541,11 +4541,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed0d2196ef859864e91e8d158a205216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  White: 0
-  Gray: 0
-  Black: 0
-  Threecol: 0
-  Sham: 0
 --- !u!4 &2139905946
 Transform:
   m_ObjectHideFlags: 0
